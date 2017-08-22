@@ -1,0 +1,19 @@
+Insertion Sort; wikipedia complete document;;  
+Merge-sort : Robert sedgewick - full chapter
+Read CLRS book : part2
+
+Heap-sort
+Quick Sort
+Counting sort
+Bucket sort
+Radix Sort
+
+----
+go through the vedio one more time
+solve edx problems
+
+
+https://github.com/haseebr/competitive-programming/tree/master/Materials
+
+
+

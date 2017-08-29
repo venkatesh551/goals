@@ -14,19 +14,27 @@ In CLRS   :  Read Part-II (sorting), Part-III (DS),
 
 Most important thing you need to understand is How many comparisons are made in the : worst-case, Best-case, avg-case 
 
+https://www.coursera.org/learn/algorithms-part1/home/welcome
+
 
 sorting:
 --------
 Read Theory about Merge-sort : wikipedia, 
 
 1. Solve sedgewick-exercises  (book)  :  3-way mergesort, Multiway mergesort, 2 on LL
-
 2. http://algs4.cs.princeton.edu/22mergesort/
 3. understand Bottom-up MS
-
 ---
-4. Read theory about Quick Sort : wikipedia, CLRS-exercises, sedgewick-exercises   
+4. Read theory about Quick Sort : wikipedia, sedgewick-exercises, CLRS-exercises,
     solve Problems : edx, HR
+
+https://www.hackerrank.com/challenges/quicksort1
+https://www.hackerrank.com/challenges/quicksort2
+We are given an array and we want to find it's kth smallest, K-th biggest element.
+http://www.spoj.com/problems/KSMALL/
+
+http://www.spoj.com/problems/LEXISORT/
+
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
     solve Problems : SPOJ, edx, HR
@@ -83,7 +91,6 @@ HackerRank : Insertion Sort Advanced Analysis
 
 References:
 -----------
-https://www.hackerrank.com/challenges/quicksort2
 https://www.codechef.com/problems/SORTING
 http://www.spoj.com/problems/tag/sortings
 https://www.hackerearth.com/practice/algorithms/sorting/

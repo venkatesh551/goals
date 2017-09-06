@@ -1,3 +1,19 @@
+CLRS :
+---
+Practice a lot.
+Try solving the problems first.
+Discuss the problems with friends.
+
+Write-code, and test-code for verification
+
+# goals  : stick to 3 books :  CP-3, CLRS, sedgewick
+1. complete edx course
+2. complete sedgewick book, vedio lectures   (including problems)
+3. complete CLRS book  (including problems)
+4. complete CP-3 book  (including problems)
+5. programming pearls  
+
+
 
 If you're changing the world, you're working on important things. You're excited to get up in the morning.
 
@@ -7,7 +23,6 @@ perseverance = persistence in doing something despite difficulty or delay in ach
 
 You shoud have solid thoeretical background, and then solve problems
 
-stick to 3 books :  CP-3, CLRS, sedgewick
 
 In CLRS   :  Read Part-II (sorting), Part-III (DS), 
              Part- IV (DP, greedy), Part-VI (Graphs)
@@ -28,12 +43,39 @@ Read Theory about Merge-sort : wikipedia,
 4. Read theory about Quick Sort : wikipedia, sedgewick-exercises, CLRS-exercises,
     solve Problems : edx, HR
 
+https://cs.stackexchange.com/questions/11458/quicksort-partitioning-hoare-vs-lomuto
+
+hoare's partition, place pivot in it's correct position, implement  : 45 mins
+https://en.wikipedia.org/wiki/Dutch_national_flag_problem
 https://www.hackerrank.com/challenges/quicksort1
-https://www.hackerrank.com/challenges/quicksort2
+1. https://www.hackerrank.com/challenges/quicksort2
+2. implement 3-way partition qsort
+3. princeton vedio, sedgewick book,
 We are given an array and we want to find it's kth smallest, K-th biggest element.
 http://www.spoj.com/problems/KSMALL/
 
-http://www.spoj.com/problems/LEXISORT/
+
+https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-optional (3 problems)
+
+   anti-quicksort edx problem (1), 17(2), 18(3)
+   3. 2.3.15, 16, 17, 18, 19 sedgewick  : Median-of-three partitioning
+   
+   4. 2.3.20 to 2.3.24 sedgewick
+   --
+   5. 2.3.25 to 2.3.31 sedgewick
+   --
+   6. sedgewick Web Exercises 1 to 4    http://algs4.cs.princeton.edu/23quicksort/
+   --   
+      sedgewick Web 5 to 7        
+   --
+   7. CLRS - chapter-7  theory, problems
+   --
+      CLRS - chapter 9 
+   
+   8. edx-problems  : https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/courseware
+   1. solve k-small, k-largest on 2 sorted arrays, Decimal dominant
+   9. Merge-sort vedio and assignment
+    
 
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
@@ -42,12 +84,16 @@ http://www.spoj.com/problems/LEXISORT/
 6. Read theory about (Counting sort, Bucket sort, Radix Sort) : wikipedia, CLRS book-exercises
     solve Problems : edx, HR
 
+http://www.spoj.com/problems/LEXISORT/
+
 7. CLRS book-part2 : order-statistics 
     edx, exercises, 
 
 8. Bubble-sort, selection-sort : wikipedia, read Chapter 2 in CLRS 
     solve Problems : HE, HR
 --
+
+
 
 9. Searching : 
 -------------

@@ -1,0 +1,136 @@
+
+1. one hour meeting (Unitasking)
+2. read C++ templates (12 to 1) : wikipedia, C++ Book
+3. templates (2 to 4:30)  Finish it
+
+
+
+
+
+Read book and solve questions from 
+The C Programming Language
+Book by Brian Kernighan and Dennis Ritchie.
+After that write code on any online coding contest website.
+
+
+For C++ :
+First read book  Programming: Principles and Practice Using C++  Book by Bjarne Stroustrup then
+C++ Primer Book by  Josée Lajoie and Stanley B. Lippman
+
+
+and 
+Do online coding contest such as on codechef, 
+topcoder, hackerrank, hackerearth and list goes on........
+
+https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
+
+
+http://thbecker.net/articles/rvalue_references/section_08.html#footnote_1
+
+
+
+skill acquisition :
+-------------------
+
+The original model proposes that a student passes through five distinct stages: novice, competence, proficiency, expertise, and mastery.
+
+
+In the novice stage, a person follows rules as given, without context, with no sense of responsibility beyond following the rules exactly. 
+
+Competence develops when the individual develops organizing principles to quickly access the particular rules that are relevant to the specific task at hand; hence, competence is characterized by active decision making in choosing a course of action. 
+
+Proficiency is shown by individuals who develop intuition to guide their decisions and devise their own rules to formulate plans. 
+
+The progression is thus from rigid adherence to rules to an intuitive mode of reasoning based on tacit knowledge.
+
+Michael Eraut summarized the five stages of increasing skill as follows:[2]
+
+1. Novice
+"rigid adherence to taught rules or plans"
+no exercise of "discretionary judgment"
+
+2. Advanced beginner
+limited "situational perception"
+all aspects of work treated separately with equal importance
+
+3. Competent
+"coping with crowdedness" (multiple activities, accumulation of information)
+some perception of actions in relation to goals
+deliberate planning
+formulates routines
+
+4. Proficient
+holistic view of situation
+prioritizes importance of aspects
+"perceives deviations from the normal pattern"
+employs maxims for guidance, with meanings that adapt to the situation at hand
+
+5. Expert
+transcends reliance on rules, guidelines, and maxims
+"intuitive grasp of situations based on deep, tacit understanding"
+has "vision of what is possible"
+uses "analytical approaches" in new situations or in case of problems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Type inference :
+------------------
+
+ability to automatically deduce, either partially or fully, the type of an expression at compile time.
+    
+
+
+Template (C++)
+-------------
+
+Templates allows functions and classes to operate with generic types. 
+
+There are three kinds of templates:
+    
+    function templates, 
+    class templates and, 
+    variable templates (since C++14)
+
+
+Function templates :
+--------------------
+    syntax for declaring function templates with type parameters is:
+
+        template <class identifier> function_declaration;
+        template <typename identifier> function_declaration;
+
+Both expressions have the same meaning and behave in exactly the same way.
+The latter form was introduced to avoid confusion,
+since a type parameter need not be a class. (It can also be a basic type)
+    
+max example
+
+
+Class templates :
+-----------------
+
+
+
+
+    
+
+

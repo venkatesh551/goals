@@ -7,12 +7,12 @@ Discuss the problems with friends.
 Write-code, and test-code for verification
 
 # goals  : stick to 3 books :  CP-3, CLRS, sedgewick
+
 1. complete edx course
 2. complete sedgewick book, vedio lectures   (including problems)
 3. complete CLRS book  (including problems)
 4. complete CP-3 book  (including problems)
-5. programming pearls  
-
+5. Programming pearls
 
 
 If you're changing the world, you're working on important things. You're excited to get up in the morning.
@@ -57,29 +57,52 @@ http://www.spoj.com/problems/KSMALL/
 
 https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-optional (3 problems)
 
-   anti-quicksort edx problem (1), 17(2), 18(3)
    3. 2.3.15, 16, 17, 18, 19 sedgewick  : Median-of-three partitioning
+
+    Median of 3 numbers in 2 comparisons ??
+    Median of 5 numbers in 6 comparisons ??
+    sort 5 numbers in 7 comparisons
+    5-way partition qsort
+    
+    https://cs.stackexchange.com/questions/44981/least-number-of-comparisons-needed-to-sort-order-5-elements/44982#44982
+    https://cs.stackexchange.com/questions/45374/prove-that-minimal-number-of-comparisons-to-find-median-among-five-elements-is-5
    
+   In partition why i <= j  ?? why not i < j ??
+   Because when i == j, there exist a test-case where v[j] > pivot,
+   we need to swap v[j] with pivot (= v[low]) , for that purpose v[j] should be <= pivot
+   
+   e.g : 2 3 4 1 4 , pivot is first element
+
+
    4. 2.3.20 to 2.3.24 sedgewick
    --
    5. 2.3.25 to 2.3.31 sedgewick
    --
    6. sedgewick Web Exercises 1 to 4    http://algs4.cs.princeton.edu/23quicksort/
-   --   
-      sedgewick Web 5 to 7        
+   --  
+      sedgewick Web 5 to 7
    --
-   7. CLRS - chapter-7  theory, problems
+   
+   7. CLRS - chapter-7  Read theory, problems
    --
-      CLRS - chapter 9 
+      CLRS - chapter 9
+   
+    -- Programming-pearls : Read theory, practice
    
    8. edx-problems  : https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/courseware
-   1. solve k-small, k-largest on 2 sorted arrays, Decimal dominant
-   9. Merge-sort vedio and assignment
+   
+   coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
+      
+   9. coursera : Merge-sort vedio and assignment
     
-
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
     solve Problems : SPOJ, edx, HR
+    priority_queue problems
+    
+    http://www.spoj.com/problems/tag/priority-queue
+    http://www.spoj.com/problems/RMID2/
+    
 
 6. Read theory about (Counting sort, Bucket sort, Radix Sort) : wikipedia, CLRS book-exercises
     solve Problems : edx, HR
@@ -89,11 +112,9 @@ http://www.spoj.com/problems/LEXISORT/
 7. CLRS book-part2 : order-statistics 
     edx, exercises, 
 
-8. Bubble-sort, selection-sort : wikipedia, read Chapter 2 in CLRS 
+8. Bubble-sort, selection-sort : wikipedia, read Chapter 2 in CLRS, elementary sorts in Sedgewick
     solve Problems : HE, HR
 --
-
-
 
 9. Searching : 
 -------------
@@ -101,6 +122,8 @@ linear, Binary, Ternary  : wikipedia
 
 Resume EDX : Go through the vedio one more time
 Solve edx problems
+
+
 
 
 10. edx : Graph-Theory :

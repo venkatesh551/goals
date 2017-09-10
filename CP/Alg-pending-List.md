@@ -3,13 +3,15 @@ http://www.cse.iitd.ernet.in/~sbaswana/Puzzles/Algo/algo.html
 
 # Books to read
 
-1. https://www.amazon.in/Programming-Pearls-Jon-Bentley/dp/8177588583/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=
+2. Mythical man month
+3. Code complete
+4. Hackers-Delight-Henry-S-Warren
+
 2. http://www.cs.uu.nl/geobook/
 6. https://www.amazon.com/Network-Flows-Theory-Algorithms-Applications/dp/013617549X
 3. http://courses.csail.mit.edu/6.851/
    http://courses.csail.mit.edu/6.854/current/
 4. http://www.infoarena.ro/blog/binary-search-shortlist
-5. https://www.amazon.com/Hackers-Delight-Henry-S-Warren/dp/0201914654
 
 
 
@@ -87,16 +89,21 @@ https://algorithmsandme.in/2014/12/07/find-kth-smallest-element-in-two-sorted-ar
 Find median of two sorted arrays
 Find intersction of 2 sorted arrays
 
-find kth Smallest-element , kth Largest in-two-sorted-arrays
-
-
-
+find kth Smallest-element, kth Largest in-two-sorted-arrays
 
 
 https://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures
 https://www.quora.com/Why-do-most-top-tech-companies-give-more-priority-to-algorithms-during-the-recruitment-process
 https://www.quora.com/profile/Cosmin-Negruseri
 http://translate.google.com/translate?hl=en&sl=auto&u=http%3A%2F%2Finfoarena.ro%2Ftraining-path
+
+
+Median of 3 numbers in 2 comparisons ??
+
+sedgewick :  qsort :  2.3.21 Lower bound for sorting with equal keys ??
+
+
+
 
 
 

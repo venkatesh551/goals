@@ -1,3 +1,38 @@
+
+# incredible benefits of reading.
+
+ability to sit down for an extended period of time and immerse ourselves in a good book is an invaluable skill.
+
+1. Improve your brain function
+    
+    Reading will get your brain jacked like a Spartan.
+    Not only does reading exercise your brain, it also creates more 
+    connections and strengthens synapses. This can contribute to the 
+    improvement of you memory, creativity, concentration, and focus — all essential skills for success.
+
+2. Build your vocabulary
+    
+    Reading forces you to confront words you are not familiar with.
+3. Relieve stress 
+     Reading will slow your mind down when it is racing and worrying. 
+    “recommends reading some form of literature for at least half an hour every day for optimum relaxation.”
+    
+4. Increase reading comprehension skills
+    You become a more efficient reader: you can read faster, understand faster, and remember more
+
+5. Learn how to eloquently and articulately organize and express thoughts
+
+6. Reusability
+    spent hours reading and rereading these books, over and over again.
+    you can always get more out of a book the second, or even third time around.
+    “A reader lives a thousand lives before he dies... The man who never reads lives only one.“
+
+book do have the power to improve your people skills!
+
+# make it a goal to read on a daily basis, or tackle a reading list by a certain date.
+
+# “The happiness of your life depends upon the quality of your thoughts.”
+    
 # goals
 
 
@@ -11,7 +46,7 @@ Read
 
 4. Maximum achievement  brian Tracy
 
-
+http://alexreichert.com/learn/reading-list/nonfiction/
 
 
 ----
@@ -34,7 +69,7 @@ The things that happend cannot be changed.
 Move out of your comfort zone. You can only grow if you are willing to 
 feel awkward and uncomfortable when you try something new.
 
-Move out of Your comfort zone
+# Move out of Your comfort zone
 ---------------------------------
     * Comfort-zone is a greatest enemy of human potential.
     * 
@@ -86,6 +121,14 @@ Move out of Your comfort zone
     * If you start everyday by completing tasks you will double into your productivity
     * 
 
+# The Five Minute Journal: A Happier You in 5 Minutes a Day
 
+    * Wake up at 5 a.m and asking himself "What good shall I do today?"    
+    * 
+    * 
+    * to bed at 10 p.m : "What good have I done today?"
+    * 
+    * 
+        http://www.thirteenvirtues.com/
 
 

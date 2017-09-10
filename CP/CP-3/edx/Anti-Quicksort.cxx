@@ -10,13 +10,20 @@ int main()
 
     ifs >> n;
     std::vector<int> v(n);
-    int k = 0, high = n-1;
+    int high = n-1, dist = (n-1)/2;
     for (int i = 0; i < n; ++i) {
         int mid = (i + high)/2;
+
         if (v[mid] == 0) {
-            v[mid] = i+1;
+            v[mid] = i + 1;
         } else {
-            v[k++] = i+1;
+            int j = i - 1;
+            while (j >= 0 && v[j] != 0) {
+                j -= dist;
+            }
+            if (j >= 0) {
+                v[j] = i + 1;
+            }
         }
     }
     for (const auto x: v) {

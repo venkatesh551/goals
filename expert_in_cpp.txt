@@ -1,11 +1,4 @@
 
-1. one hour meeting (Unitasking)
-2. read C++ templates (12 to 1) : wikipedia, C++ Book
-3. templates (2 to 4:30)  Finish it
-
-
-
-
 
 Read book and solve questions from 
 The C Programming Language
@@ -14,17 +7,18 @@ After that write code on any online coding contest website.
 
 
 For C++ :
+
+https://isocpp.org/blog/2014/09/templates-series
+
+https://isocpp.org/wiki/faq/templates#overview-templates
+
 First read book  Programming: Principles and Practice Using C++  Book by Bjarne Stroustrup then
+
 C++ Primer Book by  Josée Lajoie and Stanley B. Lippman
 
-
-and 
-Do online coding contest such as on codechef, 
-topcoder, hackerrank, hackerearth and list goes on........
+---
 
 https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
-
-
 http://thbecker.net/articles/rvalue_references/section_08.html#footnote_1
 
 
@@ -121,16 +115,62 @@ Function templates :
 Both expressions have the same meaning and behave in exactly the same way.
 The latter form was introduced to avoid confusion,
 since a type parameter need not be a class. (It can also be a basic type)
+
+The composition offered by templates is type-safe.
     
 max example
 
+templates are introduced with the primary focus on techniques needed for the design,
+implementation, and use of the standard library
+
+Every major standard-library abstraction is represented as a template 
+(for example, string, ostream , regex , complex , list , map , 
+unique_ptr , thread , future , tuple , and function)
 
 Class templates :
 -----------------
 
+A class template provides a specification for generating classes based on parameters.
+
+
+Variable templates : (since C++14)
+-------------------
+
+
+Template specialization:
+---------------------------    
+When a function or class is instantiated from a template, 
+a specialization of that template is created by the compiler 
+for the set of arguments used,
+
+
+Variadic templates
+--------------------
+C++11 introduced variadic templates, which can take a variable 
+number of arguments in a manner somewhat similar to variadic 
+functions such as std::printf. 
+Both function templates and class templates can be variadic.
+
+
+Drawbacks to the use of templates: 
+-----------------------------------
+1. Many compilers lack clear instructions when they detect a template definition error.
+2. It can be difficult to debug code that is developed using templates
 
 
 
-    
+In the standard library, string is a synonym for basic_string<char>
+
+using string = std::basic_string<char>;
+
+
+
+
+
+
+
+
+
+
 
 

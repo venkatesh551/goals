@@ -76,18 +76,24 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
 
    4. 2.3.20 to 2.3.24 sedgewick
    --
+
    5. 2.3.25 to 2.3.31 sedgewick
    --
    6. sedgewick Web Exercises 1 to 4    http://algs4.cs.princeton.edu/23quicksort/
    --  
-      sedgewick Web 5 to 7
+      sedgewick Web 5 to 8
    --
+   dual
+   three
+   A Killer Adversary for Quicksort
+   sample sort
    
    7. CLRS - chapter-7  Read theory, problems
    --
       CLRS - chapter 9
    
     -- Programming-pearls : Read theory, practice
+
    
    8. edx-problems  : https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/courseware
    
@@ -114,7 +120,10 @@ http://www.spoj.com/problems/LEXISORT/
 
 8. Bubble-sort, selection-sort : wikipedia, read Chapter 2 in CLRS, elementary sorts in Sedgewick
     solve Problems : HE, HR
---
+
+    smooth-sort
+    Tim-sort
+---
 
 9. Searching : 
 -------------
@@ -206,5 +215,7 @@ Don't be a bureaucrat.
 Ideas are more important than age. Just because someone is junior doesn't mean they don't deserve respect and cooperation.
 The worst thing you can do is stop someone from doing something by saying, "No. Period." If you say no, you have to help them find a better way to get it done
 
+
+http://infolab.stanford.edu/~ullman/focs/ch05.pdf
 
 

@@ -1,17 +1,17 @@
-https://projecteuler.net/
-http://www.cse.iitd.ernet.in/~sbaswana/Puzzles/Algo/algo.html
 
 # Books to read
 
 2. Mythical man month
 3. Code complete
 4. Hackers-Delight-Henry-S-Warren
-
 2. http://www.cs.uu.nl/geobook/
 6. https://www.amazon.com/Network-Flows-Theory-Algorithms-Applications/dp/013617549X
+
 3. http://courses.csail.mit.edu/6.851/
    http://courses.csail.mit.edu/6.854/current/
 4. http://www.infoarena.ro/blog/binary-search-shortlist
+https://projecteuler.net/
+http://www.cse.iitd.ernet.in/~sbaswana/Puzzles/Algo/algo.html
 
 
 

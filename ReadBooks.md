@@ -144,20 +144,19 @@ They built the world around them through hard work, persistence and belief in th
 
 
 "Do what you can, with what you have, where you are."  - Theodore Roosevelt
+ Read voraciously, never made excuses
 
-* Read voraciously, never made excuses
 
-
-Those who live now and are in the present are always most likely to succeed.
-Their built in advantage is simple: they live in the moment and they maximize the value of their time.
-The most important part of productivity is focusing with maximum energy, attention and efficiency on what you have in front of you in that moment.
-Make no mistake, everything else begins right there.
+# Those who live now and are in the present are always most likely to succeed.
+# Their built in advantage is simple: they live in the moment and they maximize the value of their time.
+# The most important part of productivity is focusing with maximum energy, attention and efficiency on what you have in front of you in that moment.
+# Make no mistake, everything else begins right there.
 
 
 "Create the highest, grandest vision possible for your life,
 because you become what you believe"
 
-"values are to our foundation"
+"Values are to our foundation"
 
 
 Values, when chosen properly, are of immeasurable meaning to your life and all of whom you encounter. They form the backbone for a constantly self-improving mindset which will only sharpen with time, of course when you put your wisely chosen values into practice.

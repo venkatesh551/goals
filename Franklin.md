@@ -129,7 +129,7 @@ What good I have done today ?
 What good shall I do this today ?
 
  * edx problems : 
-    -- anti-qsort, kth order, dying, A Killer Adversary for Quicksort, (3 hrs + 2.5 hrs)
+    -- anti-qsort, kth order
  * Read how to make ppt (beamer documentation), 
     - Make the presentation very precise, toc, references (45 mins reading, 45 mins changes)
  * English vocabulary ( 1:30 hr )
@@ -138,7 +138,10 @@ What good shall I do this today ?
 
 What good I have done today ?
 
- * 
+ * edx 1 problem solved (kth order statistic)
+ * beamer documentation
+ * english vocabulary
+ * dropped dad at Bus stand 
 
 
 # 17th Sep 2017
@@ -146,9 +149,11 @@ What good I have done today ?
 
 What good shall I do this today ?
 
- * solve k-small, k-largest on 2 sorted arrays, Decimal dominant,
-   coursera : Merge-sort vedio and assignment
- * 
+ * solve anti-qsort (2 hrs), A Killer Adversary for Quicksort (2 hrs),
+   find kth Smallest-element, kth Largest in-two-sorted-arrays (1.5 hrs)
+ * complete beamer presentation (1.5 hrs) (45 mins, check each slide content, make it smaller)
+ * english grammar (1.5 hr)
+ * Hobby: seneca book (1.5 hr)
 
 What good I have done today ?
 

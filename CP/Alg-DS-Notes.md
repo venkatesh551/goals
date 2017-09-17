@@ -1,9 +1,16 @@
 D.A. Patterson and J.L. Hennessy. Computer Architecture: A Quantitative Approach. Morgan Kaufmann,
+
+DSGT : https://www2.cs.sfu.ca/~ggbaker/zju/math/
+
+# Learn in-detail about recurrence relations, Time-Complexity Notations : Big-O, Big-Omega, Theta
+
 3. complete CLRS book  (including problems)
 5. Programming pearls
 
+# your Goal : Understand every Concept, Mathematical proof in sedgewick, CLRS, Solve problems
+
 CLRS :
----
+------
 Practice a lot.
 Try solving the problems first.
 Discuss the problems with friends.
@@ -98,6 +105,7 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
    find kth Smallest-element, kth Largest in-two-sorted-arrays
    coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
    https://en.wikipedia.org/wiki/Selection_algorithm
+   https://www.cs.sfu.ca/~ggbaker/zju/math/recurrence.html
    
    9. coursera : Merge-sort vedio and assignment
       7. CLRS - chapter-7  Read theory, problems

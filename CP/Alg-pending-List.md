@@ -89,7 +89,6 @@ https://algorithmsandme.in/2014/12/07/find-kth-smallest-element-in-two-sorted-ar
 Find median of two sorted arrays
 Find intersction of 2 sorted arrays
 
-find kth Smallest-element, kth Largest in-two-sorted-arrays
 
 
 https://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures
@@ -98,11 +97,20 @@ https://www.quora.com/profile/Cosmin-Negruseri
 http://translate.google.com/translate?hl=en&sl=auto&u=http%3A%2F%2Finfoarena.ro%2Ftraining-path
 
 
-Median of 3 numbers in 2 comparisons ??
-
-sedgewick :  qsort :  2.3.21 Lower bound for sorting with equal keys ??
 
 
+
+
+
+
+Lower bound is the best case running time. Lower bound is determined by the easiest input. It provides a goal for all inputs. 
+Where as upper bound  is the worst case and is determined by the  most difficult input for a given algorithm.
+Upper bounds provide guarantees for all inputs ie.. guarantees on performance of the algorithm when run on different inputs will not perform any worse than over the most difficult input.
+
+
+big omega is lowerbound 
+
+O-notation is upperbound
 
 
 

@@ -7,11 +7,14 @@
 
 \usetheme{Warsaw}
 
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\setbeamertemplate{itemize item}[triangle]
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{C++ Templates} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title{C++ Templates} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Venkatesh} % Your name
 \institute{WDC}
@@ -19,8 +22,24 @@
 
 \begin{document}
 
+\lstset{breakatwhitespace=true,
+language=C++,
+columns=fullflexible,
+keepspaces=true,
+breaklines=true,
+tabsize=3, 
+showstringspaces=false,
+extendedchars=true
+inputencoding=utf8}
+
+
 \begin{frame}
 \titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
 \end{frame}
 
 
@@ -28,31 +47,428 @@
 %	PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
 
-
+\section{Introduction}
 \begin{frame}{Introduction}
 
-Type Inference
+Templates are introduced for the purpose of design,
+implementation, and use of the standard library
 
-Ability to automatically deduce, either partially or fully, the type of an expression at compile time.
-
+\begin{block}{C++ STL}
+string, ostream, regex, complex, list, map, thread
+\end{block}
 \end{frame}
-
 
 \begin{frame}{Templates}
 
-Templates allows functions and classes to operate with generic types. 
+A template is a "pattern" that the compiler uses to generate a family of classes or functions
+
+Templates does not imply any run-time mechanisms
+
 There are three kinds of templates:
-\begin{enumerate}
-\item<1-> Function templates,
-\item<2-> class templates and,
-\item<3-> variable templates (since C++14)
-\end{enumerate}
+\begin{itemize}
+\item Function templates,
+\item Class templates and,
+\item Variable templates (since C++14)
+\end{itemize}
+\end{frame}
+
+\section{Function Templates}
+
+\begin{frame}[fragile]{Function Templates}
+
+\begin{block}{Function Templates Syntax}
+\begin{lstlisting}
+template <class identifier> function_declaration;
+template <typename identifier> function_declaration;
+\end{lstlisting}
+\end{block}
+
+Both expressions have the same meaning and behaviour\\~\\
+
+A type parameter need not be a class
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{make\_pair function template}
+
+\begin{lstlisting}
+template<typename T1, typename T2>
+pair<T1,T2> make_pair(T1 a, T2 b)
+{
+    return {a,b};
+}
+auto x = make_pair(1,2); // x is a pair<int,int>
+// y is a pair<string,double>
+auto y = make_pair(string("New York"),7.7); 
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Template Instantiation}
+
+\begin{block}{Template Instantiation}
+The process of generating a class or a function from a template
+\end{block}
+\begin{itemize}
+\item Function template arguments are deduced from the function arguments
+\item If a template argument cannot be deduced from the function arguments, we must specify
+it explicitly (e.g : static\_cast , dynamic\_cast)
+\item Class template parameters are never deduced
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{max function template}
+
+\begin{lstlisting}
+template <typename T>
+inline T max(T a, T b) {
+    return a > b ? a : b;
+}
+
+max(3, 7)
+max(3.0, 7.0)
+max(3, 7.0) // error
+max<double>(3, 7.0)
+max(double(3), 7.0)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Template Specialization}
+\begin{lstlisting}
+template<typename T> 
+inline std::string stringify(const T& x){
+  std::ostringstream out;
+  out << x;
+  return out.str();
+}
+
+template<> 
+inline std::string stringify<bool>(const bool& x) {
+  std::ostringstream out;
+  // return bools as "true" or "false" over "1" or "0" 
+  out << std::boolalpha << x; 
+  return out.str();
+}
+
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Function Template Overloading}
+
+\begin{itemize}
+\item Several function templates with the same name is possible
+\item Combination of function templates and ordinary functions with the same name is possible
+\end{itemize}
+
+Overload resolution is used to find the right function or function template to invoke.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Overload Resolution Rules}
+
+\begin{itemize}
+\item A non-templated overload is preferred to templates
+\item Only non-template and primary template overloads participate in overload resolution. Specializations are not overloads and are not considered.
+\item Only after the overload resolution selects the best-matching function template, its specializations are examined to see if one is a better match.
+\end{itemize}
+
+\begin{block}{non-template vs overload templates}
+\begin{lstlisting}
+template <class T> void foo(T);
+void foo(int);
+
+foo(10); //calls void foo(int)
+foo(10u); //calls void foo(T) with T = unsigned
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Overload resolution Examples}
+
+\begin{lstlisting}
+template< class T > void f(T);   // #1: template overload
+template< class T > void f(T*);  // #2: template overload
+void   f(double);   // #3: nontemplate overload
+template<> void f(int);  // #4: specialization of #1
+ 
+f('a');        // calls #1
+f(new int(1)); // calls #2
+f(1.0);        // calls #3
+f(1);          // calls #4
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Overload resolution Examples}
+
+\begin{lstlisting}
+template< class T > void f(T);    // #1: overload for all types
+template<>          void f(int*); // #2: specialization of #1 for pointers to int
+template< class T > void f(T*);   // #3: overload for all pointer types
+ 
+f(new int(1)); // calls #3, even though specialization of #1 would be a perfect match
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Argument Substitution Failure}
+
+Substitution Failure Is Not An Error
+\begin{lstlisting}
+
+template<typename Iter>
+typename Iter::value_type mean(Iter first, Iter last); // #1
+
+template<typename T>
+T mean(T*,T*); // #2
+void f(vector<int>& v, int* p, int n)
+{
+    auto x = mean(v.begin(),v.end()); // OK: call #1
+    auto y = mean(p,p+n); // OK: call #2
+}
+
+int*::value_type mean(int*,int*); 
+// int* does not have a member called value_type
+\end{lstlisting}
+\end{frame}
+
+\section{Class Templates}
+
+\begin{frame}
+\frametitle{Class Templates}
+
+A class template provides a specification for generating classes based on parameters.
+
+A class generated from a class template is a perfectly ordinary class
+
+\begin{block}{decrease of generated code}
+Code for a member function of a class template is only generated if that member is used
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Class Templates Declaration}
+
+\begin{itemize}
+\item Members of a class template are declared and defined exactly as they would have been for a
+non-template class
+\item A template member need not be defined within the template class itself
+\item Members of a template class are themselves templates parameterized by the parameters
+of their template class.
+\end{frame}
+
+\subsection{Class Templates Examples}
+
+\begin{frame}[fragile]
+\frametitle{Class Templates Examples}
+
+\begin{lstlisting}
+
+template <class T>
+class mypair {
+    T a, b;
+  public:
+    mypair (T first, T second) // defined in-class
+      {a=first; b=second;}
+    T getmax ();
+};
+template <class T>
+T mypair<T>::getmax ()  { // defined outside-class
+  T retval = a > b ? a : b;
+  return retval;
+}
+mypair<int> myobject (100, 75); 
+myobject.getmax(); // on-demand generation
+
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Non-type parameters for templates}
+Templates can also have regular typed parameters.
+\begin{lstlisting}
+template <class T, int N>
+class mysequence {
+    T memblock [N];
+  public:
+    void setmember (int x, T value);
+    T getmember (int x);
+};
+
+template <class T, int N>
+void mysequence<T,N>::setmember (int x, T value) {
+  memblock[x]=value;
+}
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Non-type parameters for templates}
+\begin{lstlisting}
+template <class T, int N>
+T mysequence<T,N>::getmember (int x) {
+  return memblock[x];
+}
+
+mysequence <int,5> myints;
+mysequence <double,5> mydoubles;
+myints.setmember (0,100);
+mydoubles.setmember (3,3.1416);
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Class Templates}
+It is not possible to overload a class template name.
+\begin{lstlisting}
+template<typename T>
+class String { /* ... */ };
+
+class String { /* ... */ }; // error : double definition
+
+\end{lstlisting}
+
+
+\end{frame}
+
+
+\section{Type Checking}
+\begin{frame}
+\frametitle{Type Checking}
+
+\begin{itemize}
+\item Type checking is done on the code generated by template instantiation
+
+\item Mismatch between what the programmer sees and what the compiler type checks can be a major problem
+
+\item Errors that relate to the use of template parameters cannot be detected until the template is used.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Type Equivalence}
+
+When using the same set of template arguments for a template, 
+we always refer to the same generated type.
+Aliases do not introduce new types.
+
+\begin{lstlisting}
+vector<unsigned char> s3;
+using Uchar = unsigned char;
+vector<Uchar> s4;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Type Equivalence}
+Types generated from a single template by different template arguments 
+are different types. 
+In particular, generated types from related arguments are not automatically related.
+
+For example, assume that a Circle is a kind of Shape :
+\begin{lstlisting}
+Shape *p {new Circle(100)}; // Circle* converts to Shape*
+// error : no vector<Circle>* to vector<Shape>* conversion
+vector<Shape> *q{new vector<Circle>{}};
+// error : no vector<Circle> to vector<Shape> conversion 
+vector<Shape> vs{vector<Circle>{}};
+// error : no vector<Circle*> to vector<Shape*> conversion
+vector<Shape*> vs{vector<Circle*>{}};
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Template Aliases}
+We can define an alias for a type with the using syntax or with the typedef syntax
+
+\begin{lstlisting}
+template<typename T, typename Allocator = allocator<T>> vector;
+
+using Cvec = vector<char>; // both arguments are bound
+Cvec vc = {'a', 'b', 'c'}; // vc is a vector<char,allocator<char>
+\end{lstlisting}
+
+\begin{block} {std::string}
+\begin{lstlisting}
+In the standard library, string is a synonym for basic_string<char>
+using string = std::basic_string<char>
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Variable templates : since C++14}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Variadic templates}
+C++11 introduced variadic templates, which can take a variable 
+number of arguments in a manner somewhat similar to variadic 
+functions such as std::printf. 
+Both function templates and class templates can be variadic.
+\begin{lstlisting}
+
+template<typename... Values> class tuple;  // takes zero or more arguments
+
+template<typename First, typename... Rest> class tuple; // takes one or more arguments
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Source Code Organization}
+
+From the point of view of the compiler, templates are not normal functions or classes. They are compiled on demand, meaning that the code of a template function is not compiled until an instantiation with specific template arguments is required. At that moment, when an instantiation is required, the compiler generates a function specifically for those arguments from the template.
+
+the implementation (definition) of a template class or function must be in the same file as its declaration. That means that we cannot separate the interface in a separate header file, and that we must include both interface and implementation in any file that uses the templates.
+
+The most common approach is to include (usually \#include ) the
+definition of the templates you use in every translation unit in which you use them and rely on your
+Compiler to optimize compile times and eliminate object code duplication.
+
+
+Why can’t I separate the definition of my templates class from its declaration and put it inside a .cpp file
+
+2. In order for the compiler to generate the code, it must see both the template definition (not just declaration) and the specific types/whatever used to "fill in" the template. For example, if you’re trying to use a Foo<int>, the compiler must see both the Foo template and the fact that you’re trying to make a specific Foo<int>.
+3. separate compilation model :
+   compiler probably doesn't remember the details of one .cpp file while it is compiling another .cpp file.
+
 \end{frame}
 
 
 
+\begin{frame}
+\frametitle{Drawbacks to the use of templates}
+\begin{itemize}
+\item Many compilers lack clear instructions when they detect a template definition error.
+\item It can be difficult to debug code that is developed using templates
+\end{itemize}
 
-
+\end{frame}
 
 %----------------------------------------------------------------------------------------
 

@@ -1,3 +1,7 @@
+D.A. Patterson and J.L. Hennessy. Computer Architecture: A Quantitative Approach. Morgan Kaufmann,
+3. complete CLRS book  (including problems)
+5. Programming pearls
+
 CLRS :
 ---
 Practice a lot.
@@ -10,9 +14,8 @@ Write-code, and test-code for verification
 
 1. complete edx course
 2. complete sedgewick book, vedio lectures   (including problems)
-3. complete CLRS book  (including problems)
-4. complete CP-3 book  (including problems)
-5. Programming pearls
+3. complete CP-3 book  (including problems)
+only concept from CLRS
 
 
 If you're changing the world, you're working on important things. You're excited to get up in the morning.
@@ -83,29 +86,27 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
    --  
       sedgewick Web 5 to 8
    --
-   dual
-   three
+   dual pivot
+   three pivot
+      
+   8. edx-problems : https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/courseware
+   
    A Killer Adversary for Quicksort
    sample sort
-   
-   7. CLRS - chapter-7  Read theory, problems
-   --
-      CLRS - chapter 9
-   
-    -- Programming-pearls : Read theory, practice
-
-   
-   8. edx-problems  : https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/courseware
-   
+   Median of 3 numbers in 2 comparisons ??
+   sedgewick :  qsort :  2.3.21 Lower bound for sorting with equal keys ??
+   find kth Smallest-element, kth Largest in-two-sorted-arrays
    coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
-      
+   https://en.wikipedia.org/wiki/Selection_algorithm
+   
    9. coursera : Merge-sort vedio and assignment
-    
+      7. CLRS - chapter-7  Read theory, problems
+      CLRS - chapter 9
+      Programming-pearls : Read theory, practice
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
     solve Problems : SPOJ, edx, HR
     priority_queue problems
-    
     http://www.spoj.com/problems/tag/priority-queue
     http://www.spoj.com/problems/RMID2/
     

@@ -98,23 +98,76 @@ What good shall I do this today ?
 
 What good I have done today ?
 
- * 
+ * multi-pivot qsort
+ * english vocabulary
+ * seneca letters (2)
+ * templates pdf half completed
 
 # 15th Sep 2017
------------------
+---------------
 
 What good shall I do this today ?
  
+ * Multi-pivot qsort
+ * Finish templates today
+ * English vocabulary
+ * Seneca letters (2)
+ * Don't think about past, don't distract, Unitasking
+ 
 
 What good I have done today ?
+
+ * Multi-pivot qsort : completed
+ * English vocabulary
+ * Seneca Letters (2)
+ * Don't think about past, don't distract, Unitasking
+
 
 # 16th Sep 2017
------------------
+---------------
 
 What good shall I do this today ?
- 
+
+ * edx problems : 
+    -- anti-qsort, kth order, dying, A Killer Adversary for Quicksort, (3 hrs + 2.5 hrs)
+ * Read how to make ppt (beamer documentation), 
+    - Make the presentation very precise, toc, references (45 mins reading, 45 mins changes)
+ * English vocabulary ( 1:30 hr )
+ * Seneca Letters (3)  (8 to 9:30)
+ * Don't think about past, don't distract, Unitasking
 
 What good I have done today ?
+
+ * 
+
+
+# 17th Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * solve k-small, k-largest on 2 sorted arrays, Decimal dominant,
+   coursera : Merge-sort vedio and assignment
+ * 
+
+What good I have done today ?
+
+ * 
+
+
+# 18th Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * coursera : Merge-sort vedio and assignment
+ * 
+
+What good I have done today ?
+
+ * 
+
+
 
 
 

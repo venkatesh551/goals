@@ -38,7 +38,7 @@ book do have the power to improve your people skills!
 
 Read  
 
-1. Lettes from seneca  Vol- 1, 2, 3
+1. Lettes from seneca  Vol- 1, 2, 3  (By Oct 12)
 
 2. Think and Grow Rich   Napolean hill
 
@@ -130,5 +130,56 @@ feel awkward and uncomfortable when you try something new.
     * 
     * 
         http://www.thirteenvirtues.com/
+
+
+
+# Stop-making-excuses-and-start-building-today
+---------------------------------------------
+
+procrastinating = delay or postpone action; put off doing something.
+
+Patience is a virtue
+
+They built the world around them through hard work, persistence and belief in themselves.
+
+
+"Do what you can, with what you have, where you are."  - Theodore Roosevelt
+
+* Read voraciously, never made excuses
+
+
+Those who live now and are in the present are always most likely to succeed.
+Their built in advantage is simple: they live in the moment and they maximize the value of their time.
+The most important part of productivity is focusing with maximum energy, attention and efficiency on what you have in front of you in that moment.
+Make no mistake, everything else begins right there.
+
+
+"Create the highest, grandest vision possible for your life,
+because you become what you believe"
+
+"values are to our foundation"
+
+
+Values, when chosen properly, are of immeasurable meaning to your life and all of whom you encounter. They form the backbone for a constantly self-improving mindset which will only sharpen with time, of course when you put your wisely chosen values into practice.
+
+
+"You are never too old to reinvent yourself." -  Steve Harvey
+
+
+
+"Alone, when no one else is watching, our character is revealed to us.
+We come to understand that excuses aren’t worth it. 
+In solitude, we have the ability to think in an innovative way 
+about what we want. 
+From these dreams and thoughts comes desire, which we then back with faith and begin in earnest to achieve"
+
+# We are given runway in life. That runway is called, time. We can choose to use this time wisely or we can fritter it away.
+
+Fear takes away productive time and turns it into laziness.
+
+
+
+
+
 
 

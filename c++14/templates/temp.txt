@@ -1,0 +1,38 @@
+From the point of view of the compiler, templates are not normal functions or classes. They are compiled on demand, meaning that the code of a template function is not compiled until an instantiation with specific template arguments is required. At that moment, when an instantiation is required, the compiler generates a function specifically for those arguments from the template.
+
+the implementation (definition) of a template class or function must be in the same file as its declaration. That means that we cannot separate the interface in a separate header file, and that we must include both interface and implementation in any file that uses the templates.
+
+The most common approach is to include the
+you use in every translation unit in which you use them and .
+
+
+
+
+2. In order for the compiler to generate the code, it must see both the template definition (not just declaration) and the specific types/whatever used to "fill in" the template. For example, if you’re trying to use a Foo<int>, the compiler must see both the Foo template and the fact that you’re trying to make a specific Foo<int>
+
+3. separate compilation model :
+   compiler probably doesn't remember the details of one .cpp file while it is compiling another .cpp file.
+
+
+
+
+
+
+
+
+\bibitem{faq}
+https://isocpp.org/wiki/faq/templates#overview-templates
+
+\bibitem{faq} FAQ, \url{https://isocpp.org/wiki/faq/templates#overview-templates}
+
+
+
+
+
+
+
+
+
+
+
+

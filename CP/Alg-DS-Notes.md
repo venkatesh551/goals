@@ -1,6 +1,9 @@
 D.A. Patterson and J.L. Hennessy. Computer Architecture: A Quantitative Approach. Morgan Kaufmann,
 
 DSGT : https://www2.cs.sfu.ca/~ggbaker/zju/math/
+https://en.wikipedia.org/wiki/Selection_algorithm
+https://www.cs.sfu.ca/~ggbaker/zju/math/recurrence.html
+
 
 # Learn in-detail about recurrence relations, Time-Complexity Notations : Big-O, Big-Omega, Theta
 
@@ -102,22 +105,16 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
    sample sort
    Median of 3 numbers in 2 comparisons ??
    sedgewick :  qsort :  2.3.21 Lower bound for sorting with equal keys ??
-   find kth Smallest-element, kth Largest in-two-sorted-arrays
-   coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
-   https://en.wikipedia.org/wiki/Selection_algorithm
-   https://www.cs.sfu.ca/~ggbaker/zju/math/recurrence.html
-   
+
    9. coursera : Merge-sort vedio and assignment
-      7. CLRS - chapter-7  Read theory, problems
-      CLRS - chapter 9
-      Programming-pearls : Read theory, practice
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
     solve Problems : SPOJ, edx, HR
     priority_queue problems
     http://www.spoj.com/problems/tag/priority-queue
     http://www.spoj.com/problems/RMID2/
-    
+
+smooth-sort    
 
 6. Read theory about (Counting sort, Bucket sort, Radix Sort) : wikipedia, CLRS book-exercises
     solve Problems : edx, HR
@@ -127,11 +124,14 @@ http://www.spoj.com/problems/LEXISORT/
 7. CLRS book-part2 : order-statistics 
     edx, exercises, 
 
-8. Bubble-sort, selection-sort : wikipedia, read Chapter 2 in CLRS, elementary sorts in Sedgewick
+8. Bubble-sort: wikipedia, read Chapter 2 in CLRS, elementary sorts in Sedgewick
     solve Problems : HE, HR
 
-    smooth-sort
     Tim-sort
+    coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
+    Programming Assignment: Collinear Points
+    http://www.spoj.com/problems/tag/divide-and-conquer
+
 ---
 
 9. Searching : 

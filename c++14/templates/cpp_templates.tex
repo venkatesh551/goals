@@ -64,6 +64,7 @@ string, ostream, regex, complex, list, map, thread
 \begin{itemize}
 \item A template is a "pattern" that the compiler uses to generate a family of classes or functions
 \item Templates does not imply any run-time mechanisms
+\item The composition offered by templates is \textit{type-safe}
 \end{itemize}
 
 \begin{block}{Three kinds of templates}
@@ -154,17 +155,15 @@ inline std::string stringify(const T& x){
   return out.str();
 }
 
-template<> 
+template<>
 inline std::string stringify<bool>(const bool& x) {
   std::ostringstream out;
-  // return bools as "true" or "false" over "1" or "0" 
-  out << std::boolalpha << x; 
+  out << std::boolalpha << x; // bools as "true" or "false"
   return out.str();
 }
-
 \end{lstlisting}
-
 \end{frame}
+
 
 \subsection{Function Template Overloading}
 \begin{frame}
@@ -241,7 +240,6 @@ void f(vector<int>& v, int* p, int n)
     auto y = mean(p,p+n); // OK: call #2
 }
 
-int*::value_type mean(int*,int*); // int* doesn't have such type
 \end{lstlisting}
 \end{frame}
 
@@ -287,12 +285,23 @@ class mypair {
       {a=first; b=second;}
     T getmax ();
 };
+
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Class Templates Examples}
+\begin{lstlisting}
+
 template <class T>
 T mypair<T>::getmax ()  { // defined outside-class
   T retval = a > b ? a : b;
   return retval;
 }
-mypair<int> myobject (100, 75); 
+
+mypair<int> myobject (100, 75);
+myobject.getmax() // generated on-demand
 
 \end{lstlisting}
 
@@ -413,9 +422,31 @@ using string = std::basic_string<char>
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Variable templates : since C++14}
+\begin{block} {Syntax}
+\begin{lstlisting}
+template < parameter-list > variable-declaration
+\end{lstlisting}
+\end{block}
+\begin{itemize}
+\item A variable template defines a family of variables or static data members
+\item The declared variable name becomes a template name
+\end{itemize}
+\end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Examples}
+\begin{lstlisting}
+template<class T>
+constexpr T pi = T(3.1415926535897932385L);  // variable template
+ 
+template<class T>
+T circular_area(T r) // function template
+{
+    return pi<T> * r * r; // pi<T> is a variable template instantiation
+}
+\end{lstlisting}
 \end{frame}
 
 
@@ -444,6 +475,7 @@ template<typename First, typename... Rest> class tuple; // takes one or more arg
 \item Why can’t I separate the definition of my templates into a .cpp file ?
     \begin{itemize}
     \item Compiler has to see both the template definition (not just declaration) and the specific types for generating the code
+    \item Rely on your Compiler to optimize compile times and eliminate object code duplication
     \end{itemize}
 \end{itemize}
 
@@ -472,7 +504,7 @@ template<typename First, typename... Rest> class tuple; // takes one or more arg
 %------------------------------------------------
 
 \begin{frame}
-\Huge{\centerline{The End}}
+\Huge{\centerline{Thank You}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------

@@ -8,7 +8,7 @@ struct Node {
 };
 
 void printList(Node *head) {
-    
+
     while (head) {
         std::cout << head->data << "->";
         head = head->next;
@@ -57,8 +57,7 @@ Node* shuffleMerge(Node *a, Node *b) {
 }
 
 
-void AlternateSplit(Node *head, Node **a, Node **b) {    
-    int x = 0;
+void AlternateSplit(Node *head, Node **a, Node **b) {
     Node dummyleft, dummyright, *left = &dummyleft, *right = &dummyright;
     while (head) {
         left->next = head;
@@ -101,7 +100,7 @@ int main()
     push(&head, 11);
     push(&head, 21);
     push(&head, 14);
-    printList(head);    
+    printList(head);
     head = ShuffleLinkedList(head);
     printList(head);
     return 0;

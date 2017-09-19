@@ -157,7 +157,9 @@ What good shall I do this today ?
 
 What good I have done today ?
 
- * 
+ * english grammar
+ * seneca 1 letter
+ * tried to solve anti-qsort, merge-sort vedio 
 
 
 # 18th Sep 2017
@@ -166,13 +168,29 @@ What good I have done today ?
 What good shall I do this today ?
 
  * coursera : Merge-sort vedio and assignment
- * 
+ * grammar, seneca 2 letters
+ * presentation
+
+What good I have done today ?
+
+ * solved 1 problem
+ * grammar, vocabulary
+ * presentation
+
+
+# 19th Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * coursera : Merge-sort vedio and assignment
+ * Ocaml
+ * Target : grammar, Hindu paper
+ * seneca 2 letters
 
 What good I have done today ?
 
  * 
-
-
 
 
 

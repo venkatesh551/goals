@@ -92,7 +92,7 @@ uses "analytical approaches" in new situations or in case of problems
 
 
 
-The composition offered by templates is type-safe.
+
     
 max example
 

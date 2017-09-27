@@ -190,7 +190,88 @@ What good shall I do this today ?
 
 What good I have done today ?
 
+ * Merge-sort vedio
  * 
+ * Grammar, Hindu paper
+ * Seneca Letters
+
+
+# 20th Sep 2017
+----------------
+What good shall I do this today ?
+
+ * coursera : Merge-sort vedio and assignment
+ * Ocaml
+ * Target : grammar, Hindu paper
+ * seneca 2 letters
+
+What good I have done today ?
+
+ * min, max-heap
+ * too-many meetings
+ * over-eating (don't eat for dullness)
+ * Grammar, Seneca Letters
+
+
+# 21st Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * Heap-sort, CLRS, exercises
+ * Code-review, Ocaml-bindings
+ * Target : grammar, Hindu paper
+ * seneca 2 letters
+
+What good I have done today ?
+
+ * 
+
+
+
+# 22nd Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * Heap-sort, CLRS, exercises
+ * Code-review, Ocaml-bindings
+ * Target : grammar, Hindu paper
+ * seneca 2 letters
+
+What good I have done today ?
+
+ * 
+
+
+# 23rd Sep 2017
+----------------
+
+What good shall I do this today ?
+
+
+What good I have done today ?
+
+ * Heapsort CLRS problems
+ * seneca letters, english grammar
+
+# 24th Sep 2017
+----------------
+
+What good shall I do this today ?
+
+ * 
+ * 
+
+What good I have done today ?
+
+ *
+ *
+ 
+
+
+
+
 
 
 

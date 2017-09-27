@@ -109,17 +109,40 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
    9. coursera : Merge-sort vedio and assignment
 
 5. Heap-sort : wikipedia, CLRS-exercises, sedgewick-exercises
-    solve Problems : SPOJ, edx, HR
+    solve Problems : SPOJ, edx
     priority_queue problems
+    
+    
+    https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=633
+  
     http://www.spoj.com/problems/tag/priority-queue
     http://www.spoj.com/problems/RMID2/
+    http://www.spoj.com/problems/LAZYPROG/
+    http://www.spoj.com/problems/EXPEDI/
+    http://www.spoj.com/problems/PRO/
+    
+    https://www.hackerrank.com/domains/data-structures/heap
 
-smooth-sort    
+    edx
+    https://leetcode.com/tag/heap/
+        
+smooth-sort
+
+
+https://en.wikipedia.org/wiki/Double-ended_priority_queue
+https://en.wikipedia.org/wiki/Min-max_heap
+https://en.wikipedia.org/wiki/Order_statistic_tree
+https://en.wikipedia.org/wiki/Pairing_heap
+https://en.wikipedia.org/wiki/Fibonacci_heap  (CLRS)
+https://en.wikipedia.org/wiki/Binomial_heap
+https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree
+https://en.wikipedia.org/wiki/Van_Emde_Boas_tree  (CLRS)
 
 6. Read theory about (Counting sort, Bucket sort, Radix Sort) : wikipedia, CLRS book-exercises
     solve Problems : edx, HR
 
 http://www.spoj.com/problems/LEXISORT/
+
 
 7. CLRS book-part2 : order-statistics 
     edx, exercises, 
@@ -131,6 +154,12 @@ http://www.spoj.com/problems/LEXISORT/
     coursera problems : solve k-small, k-largest on 2 sorted arrays, Decimal dominant
     Programming Assignment: Collinear Points
     http://www.spoj.com/problems/tag/divide-and-conquer
+    
+    Time-complexity by recurrence relations, prove it mathematically
+    
+    Prove Build-max-heap asymptotic tight bound is O(n) 
+    print min-heap in level-order traveral
+    
 
 ---
 
@@ -226,5 +255,7 @@ The worst thing you can do is stop someone from doing something by saying, "No. 
 
 
 http://infolab.stanford.edu/~ullman/focs/ch05.pdf
+
+http://fusharblog.com/3-ways-to-define-comparison-functions-in-cpp/
 
 

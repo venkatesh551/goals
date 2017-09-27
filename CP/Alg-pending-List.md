@@ -14,19 +14,35 @@ https://projecteuler.net/
 http://www.cse.iitd.ernet.in/~sbaswana/Puzzles/Algo/algo.html
 
 
+Must-read Books:
+-------------------
+Code Complete (2nd edition) by Steve McConnell
+The Pragmatic Programmer
+Structure and Interpretation of Computer Programs
+The C Programming Language by Kernighan and Ritchie
+Introduction to Algorithms by Cormen, Leiserson, Rivest & Stein
+Design Patterns by the Gang of Four
+Refactoring: Improving the Design of Existing Code
+The Mythical Man Month
+The Art of Computer Programming by Donald Knuth
+Compilers: Principles, Techniques and Tools by Alfred V. Aho, Ravi Sethi and Jeffrey D. Ullman
+Programming Pearls by Jon Bentley
+
+
+
+
 
 
 I see coding competitions as an efficient and fun learning tool for  
 algorithms/data structures/discrete math/coding/debugging. 
-After a while you get diminishing returns. When you see that switch to something else.
+
 
 
 Communication skills: Communicating clearly is a skill and it has to be trained. University or coding contests don't put much emphasis on it.
 
 (clarity) I had a hard time explaining my solutions clearly to other people during high school and first two years of university. I got much better when I started coaching kids for coding contests and writing articles about algorithms in a romanian publication. 
 
-(English proficiency)  People with English as their second language might find it difficult to explain complex technical issues. (and a thick eastern european accent definitely doesn't help :) ).
-
+(English proficiency)  People with English as their second language might find it difficult to explain complex technical issues.
 (introversion) Someone who's introverted might find it hard to verbalize his though process.
 
 
@@ -111,6 +127,25 @@ Upper bounds provide guarantees for all inputs ie.. guarantees on performance of
 big omega is lowerbound 
 
 O-notation is upperbound
+
+
+
+
+
+# Notes
+----------
+
+d-ary heap :
+
+* The d-ary heap or d-heap is a priority queue data structure, a generalization of the binary heap in which the nodes have d children instead of 2
+
+* 4-heaps may perform better than binary heaps in practice, even for delete-min operations
+
+* parent of the item at position i (for any i > 0) is the item at position floor((i − 1)/d) and its children are the items at positions d * i + 1 through d * i + d.
+
+*  
+
+
 
 
 

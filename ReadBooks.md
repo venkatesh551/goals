@@ -146,12 +146,19 @@ They built the world around them through hard work, persistence and belief in th
 "Do what you can, with what you have, where you are."  - Theodore Roosevelt
  Read voraciously, never made excuses
 
+# Live in the present
+-------------------------------
 
 # Those who live now and are in the present are always most likely to succeed.
 # Their built in advantage is simple: they live in the moment and they maximize the value of their time.
 # The most important part of productivity is focusing with maximum energy, attention and efficiency on what you have in front of you in that moment.
+
 # Make no mistake, everything else begins right there.
 
+# Have a peaceful life, a quiet life, reading good books, doing a little social work and playing music
+
+# Focus is a key element of any work.
+# You have to stop worrying about what you don't have, and focus on what you have
 
 "Create the highest, grandest vision possible for your life,
 because you become what you believe"

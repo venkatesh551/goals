@@ -148,5 +148,24 @@ d-ary heap :
 
 
 
+https://en.wikipedia.org/wiki/Double-ended_priority_queue
+https://en.wikipedia.org/wiki/Min-max_heap
+https://en.wikipedia.org/wiki/Order_statistic_tree
+https://en.wikipedia.org/wiki/Pairing_heap
+https://en.wikipedia.org/wiki/Fibonacci_heap  (CLRS)
+https://en.wikipedia.org/wiki/Binomial_heap
+https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree
+https://en.wikipedia.org/wiki/Van_Emde_Boas_tree  (CLRS)
+
+Greedy alg : https://en.wikipedia.org/wiki/Interval_scheduling 
+
+
+http://www.spoj.com/problems/INTERVAL/
+
+
+
+
+
+
 
 

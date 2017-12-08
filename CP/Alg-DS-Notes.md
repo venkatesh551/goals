@@ -3,7 +3,13 @@ D.A. Patterson and J.L. Hennessy. Computer Architecture: A Quantitative Approach
 DSGT : https://www2.cs.sfu.ca/~ggbaker/zju/math/
 https://en.wikipedia.org/wiki/Selection_algorithm
 https://www.cs.sfu.ca/~ggbaker/zju/math/recurrence.html
+leetcode tags :  https://leetcode.com/tag/array/
 
+https://en.wikipedia.org/wiki/Edsger_W._Dijkstra
+
+manuscripts
+
+http://www.spoj.com/problems/tags
 
 # Learn in-detail about recurrence relations, Time-Complexity Notations : Big-O, Big-Omega, Theta
 
@@ -116,27 +122,39 @@ https://www.coursera.org/learn/algorithms-part1/quiz/iH9u8/interview-questions-o
     https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=633
   
     http://www.spoj.com/problems/tag/priority-queue
-    http://www.spoj.com/problems/RMID2/
-    http://www.spoj.com/problems/LAZYPROG/
-    http://www.spoj.com/problems/EXPEDI/
-    http://www.spoj.com/problems/PRO/
+    http://www.spoj.com/problems/tag/sliding-window-1
     
+    http://www.spoj.com/problems/RMID2/ 
+    http://www.spoj.com/problems/ARRAYSUB/
     https://www.hackerrank.com/domains/data-structures/heap
-
-    edx
+    
     https://leetcode.com/tag/heap/
-        
+
+1. skyline problem : https://briangordon.github.io/2014/08/the-skyline-problem.html
+
+    * 8. http://www.zrzahid.com/the-skyline-problem/
+    * 2. http://www.zrzahid.com/maximum-number-of-overlapping-intervals/
+    * 1. https://leetcode.com/problems/non-overlapping-intervals/description/
+    * 3. cpu overload
+    * 4. http://www.spoj.com/problems/QUEST5/
+    * 6. http://www.spoj.com/problems/BUSYMAN/
+
+
+2. Super Ugly Number
+3. Split Array into Consecutive Subsequences
+4. Kth Smallest Element in a Sorted Matrix
+5. Trapping Rain Water II
+6. http://www.spoj.com/problems/EXPEDI/
+7. http://www.spoj.com/problems/LAZYPROG/
+8. http://www.spoj.com/problems/PRO/
+
+9. Sedgewick Book, vedio, exercises
+
+EDX
+
+  http://acgtun.com/leetcode/solution
 smooth-sort
 
-
-https://en.wikipedia.org/wiki/Double-ended_priority_queue
-https://en.wikipedia.org/wiki/Min-max_heap
-https://en.wikipedia.org/wiki/Order_statistic_tree
-https://en.wikipedia.org/wiki/Pairing_heap
-https://en.wikipedia.org/wiki/Fibonacci_heap  (CLRS)
-https://en.wikipedia.org/wiki/Binomial_heap
-https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree
-https://en.wikipedia.org/wiki/Van_Emde_Boas_tree  (CLRS)
 
 6. Read theory about (Counting sort, Bucket sort, Radix Sort) : wikipedia, CLRS book-exercises
     solve Problems : edx, HR
@@ -160,6 +178,8 @@ http://www.spoj.com/problems/LEXISORT/
     Prove Build-max-heap asymptotic tight bound is O(n) 
     print min-heap in level-order traveral
     
+http://www.spoj.com/problems/tag/sorting
+
 
 ---
 
@@ -170,7 +190,7 @@ linear, Binary, Ternary  : wikipedia
 Resume EDX : Go through the vedio one more time
 Solve edx problems
 
-
+http://www.spoj.com/BSCPROG/
 
 
 10. edx : Graph-Theory :

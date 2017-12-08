@@ -1,0 +1,670 @@
+Top_Largest_M_in_stream.cpp:23:68: error: ‘bool Transaction::operator>(const Transaction&, const Transaction&)’ must take exactly one argument
+         bool operator > (const Transaction &p, const Transaction &q) {
+                                                                    ^
+Top_Largest_M_in_stream.cpp:27:76: error: ‘std::ostream& Transaction::operator<<(std::ostream&, const Transaction&)’ must take exactly one argument
+         std::ostream & operator << (std::ostream &ofs, const Transaction &t) {
+                                                                            ^
+Top_Largest_M_in_stream.cpp: In function ‘int main(int, char**)’:
+Top_Largest_M_in_stream.cpp:46:15: error: ‘class std::priority_queue<Transaction, std::vector<Transaction>, std::greater<Transaction> >’ has no member named ‘insert’
+         minPQ.insert(Transaction(name, date, val));
+               ^~~~~~
+Top_Largest_M_in_stream.cpp:56:32: error: no matching function for call to ‘begin(std::stack<Transaction>&)’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:105:37: note: candidate: template<class _Tp> const _Tp* std::begin(const std::valarray<_Tp>&)
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+/usr/include/c++/6/bits/range_access.h:105:37: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘const std::valarray<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:104:31: note: candidate: template<class _Tp> _Tp* std::begin(std::valarray<_Tp>&)
+   template<typename _Tp> _Tp* begin(valarray<_Tp>&);
+                               ^~~~~
+/usr/include/c++/6/bits/range_access.h:104:31: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘std::valarray<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:87:5: note: candidate: template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::begin(_Tp (&)[_Nm])
+     begin(_Tp (&__arr)[_Nm])
+     ^~~~~
+/usr/include/c++/6/bits/range_access.h:87:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::stack<Transaction>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:58:5: note: candidate: template<class _Container> decltype (__cont.begin()) std::begin(const _Container&)
+     begin(const _Container& __cont) -> decltype(__cont.begin())
+     ^~~~~
+/usr/include/c++/6/bits/range_access.h:58:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/6/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(const _Container&) [with _Container = std::stack<Transaction>]’:
+Top_Largest_M_in_stream.cpp:56:32:   required from here
+/usr/include/c++/6/bits/range_access.h:58:56: error: ‘const class std::stack<Transaction>’ has no member named ‘begin’
+     begin(const _Container& __cont) -> decltype(__cont.begin())
+                                                 ~~~~~~~^~~~~
+/usr/include/c++/6/bits/range_access.h:48:5: note: candidate: template<class _Container> decltype (__cont.begin()) std::begin(_Container&)
+     begin(_Container& __cont) -> decltype(__cont.begin())
+     ^~~~~
+/usr/include/c++/6/bits/range_access.h:48:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/6/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(_Container&) [with _Container = std::stack<Transaction>]’:
+Top_Largest_M_in_stream.cpp:56:32:   required from here
+/usr/include/c++/6/bits/range_access.h:48:50: error: ‘class std::stack<Transaction>’ has no member named ‘begin’
+     begin(_Container& __cont) -> decltype(__cont.begin())
+                                           ~~~~~~~^~~~~
+In file included from /usr/include/c++/6/bits/range_access.h:36:0,
+                 from /usr/include/c++/6/string:51,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/initializer_list:89:5: note: candidate: template<class _Tp> constexpr const _Tp* std::begin(std::initializer_list<_Tp>)
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^~~~~
+/usr/include/c++/6/initializer_list:89:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘std::initializer_list<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+Top_Largest_M_in_stream.cpp:56:32: error: no matching function for call to ‘end(std::stack<Transaction>&)’
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:107:37: note: candidate: template<class _Tp> const _Tp* std::end(const std::valarray<_Tp>&)
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+/usr/include/c++/6/bits/range_access.h:107:37: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘const std::valarray<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:106:31: note: candidate: template<class _Tp> _Tp* std::end(std::valarray<_Tp>&)
+   template<typename _Tp> _Tp* end(valarray<_Tp>&);
+                               ^~~
+/usr/include/c++/6/bits/range_access.h:106:31: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘std::valarray<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:97:5: note: candidate: template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::end(_Tp (&)[_Nm])
+     end(_Tp (&__arr)[_Nm])
+     ^~~
+/usr/include/c++/6/bits/range_access.h:97:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::stack<Transaction>’
+     for (const Transaction t : st) {
+                                ^~
+In file included from /usr/include/c++/6/string:51:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/range_access.h:78:5: note: candidate: template<class _Container> decltype (__cont.end()) std::end(const _Container&)
+     end(const _Container& __cont) -> decltype(__cont.end())
+     ^~~
+/usr/include/c++/6/bits/range_access.h:78:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/6/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(const _Container&) [with _Container = std::stack<Transaction>]’:
+Top_Largest_M_in_stream.cpp:56:32:   required from here
+/usr/include/c++/6/bits/range_access.h:78:54: error: ‘const class std::stack<Transaction>’ has no member named ‘end’
+     end(const _Container& __cont) -> decltype(__cont.end())
+                                               ~~~~~~~^~~
+/usr/include/c++/6/bits/range_access.h:68:5: note: candidate: template<class _Container> decltype (__cont.end()) std::end(_Container&)
+     end(_Container& __cont) -> decltype(__cont.end())
+     ^~~
+/usr/include/c++/6/bits/range_access.h:68:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/6/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(_Container&) [with _Container = std::stack<Transaction>]’:
+Top_Largest_M_in_stream.cpp:56:32:   required from here
+/usr/include/c++/6/bits/range_access.h:68:48: error: ‘class std::stack<Transaction>’ has no member named ‘end’
+     end(_Container& __cont) -> decltype(__cont.end())
+                                         ~~~~~~~^~~
+In file included from /usr/include/c++/6/bits/range_access.h:36:0,
+                 from /usr/include/c++/6/string:51,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/initializer_list:99:5: note: candidate: template<class _Tp> constexpr const _Tp* std::end(std::initializer_list<_Tp>)
+     end(initializer_list<_Tp> __ils) noexcept
+     ^~~
+/usr/include/c++/6/initializer_list:99:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:56:32: note:   ‘std::stack<Transaction>’ is not derived from ‘std::initializer_list<_Tp>’
+     for (const Transaction t : st) {
+                                ^~
+Top_Largest_M_in_stream.cpp:57:19: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const Transaction’)
+         std::cout << t ;
+         ~~~~~~~~~~^~~~
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = Transaction] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+Top_Largest_M_in_stream.cpp:57:22: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/6/ostream:108:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/6/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/6/ostream:117:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/6/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/6/ostream:127:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/6/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:166:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘long int’
+/usr/include/c++/6/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:170:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘long unsigned int’
+/usr/include/c++/6/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:174:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘bool’
+In file included from /usr/include/c++/6/ostream:638:0,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/6/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘short int’
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:181:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘short unsigned int’
+In file included from /usr/include/c++/6/ostream:638:0,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/6/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘int’
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:192:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘unsigned int’
+/usr/include/c++/6/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:201:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘long long int’
+/usr/include/c++/6/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:205:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘long long unsigned int’
+/usr/include/c++/6/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:220:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘double’
+/usr/include/c++/6/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:224:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘float’
+/usr/include/c++/6/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:232:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘long double’
+/usr/include/c++/6/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/6/ostream:245:7: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘const void*’
+In file included from /usr/include/c++/6/ostream:638:0,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/6/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘const Transaction’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:574:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘const unsigned char*’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:569:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘const signed char*’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:556:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘const char*’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/ostream:638:0,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/6/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘const char*’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:539:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   mismatched types ‘const _CharT*’ and ‘Transaction’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:519:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘unsigned char’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:514:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘signed char’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:508:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘char’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:502:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘char’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/iostream:39:0,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/6/ostream:497:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘Transaction’)
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/bits/ios_base.h:46:0,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/6/system_error:209:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   cannot convert ‘t’ (type ‘const Transaction’) to type ‘const std::error_code&’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+Top_Largest_M_in_stream.cpp:57:22: note:   ‘const Transaction’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+         std::cout << t ;
+                      ^
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h: In instantiation of ‘constexpr bool std::greater<_Tp>::operator()(const _Tp&, const _Tp&) const [with _Tp = Transaction]’:
+/usr/include/c++/6/bits/predefined_ops.h:125:18:   required from ‘constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<Transaction*, std::vector<Transaction> >; _Iterator2 = __gnu_cxx::__normal_iterator<Transaction*, std::vector<Transaction> >; _Compare = std::greater<Transaction>]’
+/usr/include/c++/6/bits/stl_heap.h:217:14:   required from ‘void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Transaction*, std::vector<Transaction> >; _Distance = long int; _Tp = Transaction; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<std::greater<Transaction> >]’
+/usr/include/c++/6/bits/stl_heap.h:335:22:   required from ‘void std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Transaction*, std::vector<Transaction> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<std::greater<Transaction> >]’
+/usr/include/c++/6/bits/stl_heap.h:388:23:   required from ‘void std::make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Transaction*, std::vector<Transaction> >; _Compare = std::greater<Transaction>]’
+/usr/include/c++/6/bits/stl_queue.h:447:23:   required from ‘std::priority_queue<_Tp, _Sequence, _Compare>::priority_queue(const _Compare&, _Sequence&&) [with _Tp = Transaction; _Sequence = std::vector<Transaction>; _Compare = std::greater<Transaction>]’
+Top_Largest_M_in_stream.cpp:37:92:   required from here
+/usr/include/c++/6/bits/stl_function.h:376:20: error: no match for ‘operator>’ (operand types are ‘const Transaction’ and ‘const Transaction’)
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_pair.h:454:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator>(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator>(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_pair.h:454:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::pair<_T1, _T2>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:310:5: note: candidate: template<class _Iterator> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator>(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:310:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:367:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator>(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:367:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1161:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator>(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1161:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::move_iterator<_IteratorL>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1167:5: note: candidate: template<class _Iterator> bool std::operator>(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator>(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1167:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::move_iterator<_IteratorL>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5188:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5188:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5201:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5201:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5213:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5213:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   mismatched types ‘const _CharT*’ and ‘Transaction’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/c++/6/queue:60,
+                 from Top_Largest_M_in_stream.cpp:2:
+/usr/include/c++/6/bits/stl_deque.h:306:5: note: candidate: template<class _Tp, class _Ref, class _Ptr> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator>(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:306:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/c++/6/queue:60,
+                 from Top_Largest_M_in_stream.cpp:2:
+/usr/include/c++/6/bits/stl_deque.h:313:5: note: candidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator>(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:313:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/c++/6/queue:60,
+                 from Top_Largest_M_in_stream.cpp:2:
+/usr/include/c++/6/bits/stl_deque.h:2253:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator>(const deque<_Tp, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:2253:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::deque<_Tp, _Alloc>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/vector:64:0,
+                 from /usr/include/c++/6/queue:61,
+                 from Top_Largest_M_in_stream.cpp:2:
+/usr/include/c++/6/bits/stl_vector.h:1539:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator>(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_vector.h:1539:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/queue:64:0,
+                 from Top_Largest_M_in_stream.cpp:2:
+/usr/include/c++/6/bits/stl_queue.h:328:5: note: candidate: template<class _Tp, class _Seq> bool std::operator>(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator>(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_queue.h:328:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::queue<_Tp, _Seq>’
+       { return __x > __y; }
+                ~~~~^~~~~
+In file included from /usr/include/c++/6/stack:61:0,
+                 from Top_Largest_M_in_stream.cpp:3:
+/usr/include/c++/6/bits/stl_stack.h:305:5: note: candidate: template<class _Tp, class _Seq> bool std::operator>(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)
+     operator>(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_stack.h:305:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/string:48:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from Top_Largest_M_in_stream.cpp:1:
+/usr/include/c++/6/bits/stl_function.h:376:20: note:   ‘const Transaction’ is not derived from ‘const std::stack<_Tp, _Seq>’
+       { return __x > __y; }
+                ~~~~^~~~~

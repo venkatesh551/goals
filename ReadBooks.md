@@ -1,4 +1,37 @@
 
+# goals
+
+ 
+
+Read Books
+
+1. Lettes from seneca  Vol- 1, 2, 3  (By Oct 12)
+
+2. Think and Grow Rich   Napolean hill
+
+3. The Power of Positive Thinking: 10 Traits for Maximum Results
+
+4. Maximum achievement  brian Tracy
+
+
+http://alexreichert.com/learn/reading-list/nonfiction/
+
+
+
+
+
+Bill Gates reads about 50 books every year, Mark Cuban reads three hours every day, Mark Zuckerberg resolved to read 24 books in a year, and Warren Buffett spends 80 percent of his day reading.
+
+
+
+
+
+
+
+
+
+
+
 # incredible benefits of reading.
 
 ability to sit down for an extended period of time and immerse ourselves in a good book is an invaluable skill.
@@ -33,20 +66,7 @@ book do have the power to improve your people skills!
 
 # “The happiness of your life depends upon the quality of your thoughts.”
     
-# goals
 
-
-Read  
-
-1. Lettes from seneca  Vol- 1, 2, 3  (By Oct 12)
-
-2. Think and Grow Rich   Napolean hill
-
-3. The Power of Positive Thinking: 10 Traits for Maximum Results
-
-4. Maximum achievement  brian Tracy
-
-http://alexreichert.com/learn/reading-list/nonfiction/
 
 
 ----
@@ -147,11 +167,11 @@ They built the world around them through hard work, persistence and belief in th
  Read voraciously, never made excuses
 
 # Live in the present
--------------------------------
-
+----------------------
 # Those who live now and are in the present are always most likely to succeed.
 # Their built in advantage is simple: they live in the moment and they maximize the value of their time.
-# The most important part of productivity is focusing with maximum energy, attention and efficiency on what you have in front of you in that moment.
+# The most important part of productivity is focusing with maximum energy, attention and efficiency
+# on what you have in front of you in that moment.
 
 # Make no mistake, everything else begins right there.
 
@@ -159,6 +179,18 @@ They built the world around them through hard work, persistence and belief in th
 
 # Focus is a key element of any work.
 # You have to stop worrying about what you don't have, and focus on what you have
+# No matter how tougher the future looked there was always a hope for a better tomorrow
+
+# He would work it all out in his head before putting pen to paper.
+# when he was a physics student he would solve his homework problems in his head while walking the streets
+
+# " Dijkstra's style: his approach to programming as a high, intellectual challenge; 
+# his eloquent insistence and practical demonstration 
+# ``that programs should be composed correctly, not just debugged into correctness;``
+# and his illuminating perception of problems at the foundations of program design. 
+# We have come to value good programs in much the same way as we value good literature "
+
+
 
 "Create the highest, grandest vision possible for your life,
 because you become what you believe"
@@ -182,6 +214,18 @@ From these dreams and thoughts comes desire, which we then back with faith and b
 # We are given runway in life. That runway is called, time. We can choose to use this time wisely or we can fritter it away.
 
 Fear takes away productive time and turns it into laziness.
+
+
+
+
+Parental care, concern, love, affection, instilling sense of optimism
+
+
+# Top performer, meet expectations consistently
+
+    star performer
+
+
 
 
 

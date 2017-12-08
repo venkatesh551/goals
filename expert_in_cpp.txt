@@ -5,8 +5,34 @@ The C Programming Language
 Book by Brian Kernighan and Dennis Ritchie.
 After that write code on any online coding contest website.
 
+C++ Books
+-------------
 
-For C++ :
+1. The C++ Programming Language (Bjarne Stroustrup) (updated for C++11) 
+
+The classic introduction to C++ by its creator. Written to parallel the classic K&R, this indeed reads very much like it and covers just about everything from the core language to the standard library, to programming paradigms to the language's philosophy.
+
+2. Modern C++ Design (Andrei Alexandrescu) 
+
+A groundbreaking book on advanced generic programming techniques. Introduces policy-based design, type lists, and fundamental generic programming idioms then explains how many useful design patterns (including small object allocators, functors, factories, visitors, and multi-methods) can be implemented efficiently, modularly, and cleanly using generic programming
+
+3. Effective Modern C++ (Scott Meyers) 
+
+This is basically the new version of Effective C++, aimed at C++ programmers making the transition from C++03 to C++11 and C++14.
+
+4. Effective STL (Scott Meyers) 
+
+This aims to do the same to the part of the standard library coming from the STL what Effective C++ did to the language as a whole: It presents rules of thumb along with their rationale.
+
+5. Standard C++ IOStreams and Locales: Advanced Programmer's Guide and Reference
+
+https://jasonroell.com/2015/03/16/12-most-infuential-books-every-software-engineer-needs-to-read/
+
+
+
+
+
+
 
 https://isocpp.org/blog/2014/09/templates-series
 
@@ -189,38 +215,15 @@ class Shape {
 on every template parameter."
 
 
+https://eli.thegreenplace.net/2014/variadic-templates-in-c/
+http://en.cppreference.com/w/cpp/language/parameter_pack
+
+http://lbrandy.com/blog/2013/03/variadic_templates/
+
+http://enki-tech.blogspot.in/2012/08/c11-vector-improved-how-it-works.html
 
 
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+http://stackoverflow.com/a/16012355
 
 
 

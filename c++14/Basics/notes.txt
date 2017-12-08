@@ -1,0 +1,25 @@
+   /**                                                                           
+ 95    *  @brief  Convert a value to an rvalue.                                     
+ 96    *  @param  __t  A thing of arbitrary type.                                   
+ 97    *  @return The parameter cast to an rvalue-reference to allow moving it.     
+ 98   */                                                                            
+ 99   template<typename _Tp>                                                        
+100     constexpr typename std::remove_reference<_Tp>::type&&                       
+101     move(_Tp&& __t) noexcept                                                    
+102     { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); } 
+
+
+
+http://en.cppreference.com/w/cpp/utility/initializer_list
+
+
+https://isocpp.org/wiki/faq/dtors#placement-new
+
+
+Difference between std::uninitialized_copy & std::copy
+
+
+
+page 523
+
+

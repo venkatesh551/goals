@@ -271,6 +271,58 @@ What good I have done today ?
 
 
 
+# 2nd Oct 2017
+------------------
+
+What good shall I do this today ?
+
+ * Visit ISCKON temple (Finish by Afternoon)
+ * 
+ * Read Hindu paper, Book
+ * 
+ * Evening (Go to Park)
+ 
+
+What good I have done today ?
+
+ * Went to banashankari temple
+ * Read Hindu paper, Book
+ 
+
+
+# 3rd Oct 2017
+---------------
+
+What good shall I do this today ?
+
+ * Stay in home, Have a family time
+ * 
+ * Read Hindu paper, Book
+ * 
+
+What good I have done today ?
+
+ * 
+ * 
+ 
+
+
+# 8th Oct 2017
+---------------
+
+What good shall I do this today ?
+
+ * Programming
+ * 
+ * variadic templates ppt : Finish it
+ * 
+ * Hindu paper, seneca vol-2
+
+What good I have done today ?
+
+ * 
+ * 
+
 
 
 

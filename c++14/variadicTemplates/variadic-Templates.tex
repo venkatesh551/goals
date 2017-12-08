@@ -1,0 +1,469 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\setbeamertemplate{itemize item}[triangle]
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Variadic Templates} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Venkatesh} % Your name
+\institute{WDC}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\lstset{breakatwhitespace=true,
+language=C++,
+columns=fullflexible,
+keepspaces=true,
+breaklines=true,
+tabsize=3, 
+showstringspaces=false,
+extendedchars=true
+inputencoding=utf8}
+
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}{Outline}
+  % You might wish to add the option [pausesections]
+  \begin{enumerate}
+   \item Introduction
+   \item Fundamentals
+        \begin{itemize}
+        \item Parameter Packs
+        \end{itemize}
+   \item Examples
+        \begin{itemize}
+        \item Expansion loci
+        \item Variadic Function template
+        \item Tuples
+        \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Introduction}
+
+\begin{block}{Variadic templates}
+mechanism for passing an arbitrary number of arguments of arbitrary types to a template
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Variadic class template}
+
+\begin{block}{e.g:}
+\begin{lstlisting}
+template<class ... Types> struct Tuple {};
+Tuple<> t0;           // Types contains no arguments
+Tuple<int> t1;        // Types contains one argument: int
+Tuple<int, float> t2; // Types contains two arguments: int and float
+Tuple<0> error;       // error: 0 is not a type
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Variadic function template}
+
+
+\begin{block}{e.g:}
+\begin{lstlisting}
+template<class ... Types> void f(Types ... args);
+f();       // OK: args contains no arguments
+f(1);      // OK: args contains one argument: int
+f(2, 1.0); // OK: args contains two arguments: int and double
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Fundamentals}
+
+\begin{lstlisting}
+
+template <typename... Ts>
+class C
+{
+    // fill the body
+};
+ 
+template <typename... Ts>
+void fun(const Ts&... vs)
+{
+    // fill the body
+}
+
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A New Kind: Parameter Packs}
+
+Ts is not a type; vs is not a value!
+
+\begin{lstlisting}
+typedef Ts MyList; // error!
+Ts var; // error!
+auto copy = vs; // error!
+\end{lstlisting}
+
+\begin{itemize}
+\item Ts is an alias for a list of types
+\item vs is an alias for a list of values
+\item Either list may be potentially empty
+\item Both obey only specific actions
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Parameter pack}
+
+\begin{block}{template parameter pack}
+ is a template parameter that accepts zero or more template arguments
+\end{block}
+
+\begin{block}{function parameter pack}
+ is a function parameter that accepts zero or more function arguments
+\end{block}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Parameter pack Syntax}
+
+\begin{block} {Template parameter pack}
+\begin{lstlisting}
+type ... Args(optional)
+
+typename|class ... Args(optional)
+\end{lstlisting}
+\end{block}
+
+\begin{block}{Function parameter pack}
+\begin{lstlisting}
+Args ... args(optional)
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Constraint}
+
+\textit{template parameter pack} must be the final parameter in the template parameter list 
+
+\begin{block}{e.g:}
+\begin{lstlisting}
+template<typename... Ts, typename U> struct Invalid;
+// Error: Ts.. not at the end
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Using parameter packs}
+
+\begin {itemize}
+\item Apply sizeof... to it, this will return how many types in Ts
+\begin{lstlisting}
+size_t items = sizeof...(Ts); // or vs
+\end{lstlisting}
+
+
+\item {Parameter pack expansion}
+\begin{block}{Syntax}
+\begin{lstlisting}
+pattern ...	
+\end{lstlisting}
+\end{block}
+expands to comma-separated list of zero or more patterns.
+Pattern must include at least one parameter pack
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Pack expansion}
+
+\begin{block}{e.g:}
+\begin{lstlisting}
+template<class ...Us> void f(Us... pargs) {}
+template<class ...Ts> void g(Ts... args) {
+    f(&args...); // "&args..." is a pack expansion
+                 // "&args" is its pattern
+}
+g(1, 0.2, "a"); 
+// Ts... args expand to int E1, double E2, const char* E3
+// &args... expands to &E1, &E2, &E3
+// Us... pargs expand to int* E1, double* E2, const char** E3
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Expansion rules}
+
+\begin{lstlisting}
+
+Use            Expansion
+
+Ts...          T1, .., Tn
+Ts&&...        T1&&, .., Tn&&
+x<Ts,Y>::z...  x<T1,Y>::z, .., x<Tn,Y>::z
+x<Ts&,Us>...   x<T1&,U1>, .., x<Tn&,Un>
+func(5,vs)...  func(5,v1), .., func(5,vn)
+
+\end{lstlisting}
+\begin{itemize}
+\item When expanding two lists in lock-step, they should have the same size.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Multiple Expansions}
+
+\begin{block}{Expansion proceeds inwards outwards}
+
+\begin{lstlisting}
+template <class ... Ts> void fun(Ts... vs) {
+
+    gun(A<Ts...>::hun(vs)...);
+    gun(A<Ts...>::hun(vs...));
+    gun(A<Ts>::hun(vs)...); 
+
+}
+\end{lstlisting}
+These are different expansions
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+1. Initializer lists
+
+\begin{lstlisting}
+any a[] = { vs... };
+\end{lstlisting}
+
+\begin{block}{example}
+\begin{lstlisting}
+template<typename... Ts> void func(Ts... args){
+    const int size = sizeof...(args) + 2;
+    int res[size] = {1,args...,2};
+    int dummy[sizeof...(Ts)] = { (std::cout << args, 0)... };
+}
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+2. Function argument lists (simply function-call operator)
+
+\begin{block}{example}
+\begin{lstlisting}
+f(&args...); // expands to f(&E1, &E2, &E3)
+f(n, ++args...); // expands to f(n, ++E1, ++E2, ++E3);
+f(++args..., n); // expands to f(++E1, ++E2, ++E3, n);
+f(h(args...) + args...); // expands to 
+// f(h(E1,E2,E3) + E1, h(E1,E2,E3) + E2, h(E1,E2,E3) + E3)
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+3. Template argument lists
+
+\begin{block}{example}
+\begin{lstlisting}
+template<class A, class B, class...C> void func(A arg1, B arg2, C...arg3)
+{
+    container<A,B,C...> t1;  
+    // expands to container<A,B,E1,E2,E3> 
+    container<C...,A,B> t2;  
+    // expands to container<E1,E2,E3,A,B> 
+    container<A,C...,B> t3;  
+    // expands to container<A,E1,E2,E3,B> 
+}
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+4. Base specifiers and member initializer lists
+
+\begin{block}{example}
+\begin{lstlisting}
+template <typename... Ts>
+struct C : Ts... {};
+
+template <typename... Ts>
+struct D : Box<Ts>... {  };
+
+template<class... Mixins>
+class X : public Mixins... {
+ public:
+    X(const Mixins&... mixins) : Mixins(mixins)... { }
+};
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+5. Lambda captures
+
+\begin{block}{example}
+\begin{lstlisting}
+template<class ...Args>
+void f(Args... args) {
+    auto lm = [&, args...] { return g(args...); };
+    lm();
+}
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Expansion loci }
+
+6. Function parameter list
+
+\begin{block}{example}
+\begin{lstlisting}
+template<typename ...Ts> void f(Ts...) {}
+f('a', 1);  // Ts... expands to void f(char, int)
+f(0.1);     // Ts... expands to void f(double)
+ 
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{How to use variadic templates}
+
+\begin{block}{usage approach}
+Pattern Matching!
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Examples : User defined Tuple }
+
+\begin{lstlisting}
+Tuple<double , int, char> x {1.1, 42, 'a'};
+cout << x << "\n";
+cout << get<1>(x) << "\n";
+\end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Advantages}
+
+\begin{itemize}
+\item Library utilities std::make\_unique, std::make\_shared
+\end{itemize}
+
+\begin{block}{std::make\_unique for single objects }
+\begin{lstlisting}
+   template<typename Tp, typename... Args>                             
+   make_unique(Args&&... args) { 
+        return unique_ptr<Tp>(new Tp(std::forward<Args>(args)...));
+   }
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{References}
+\begin{thebibliography}{2} % Beamer does not support BibTeX so references must be inserted manually as below
+\setbeamertemplate{bibliography item}[book]
+\bibitem{Stroustrup} The C++ Programming Language [4th Edition] - Bjarne Stroustrup
+\end{thebibliography}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Thank You}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+

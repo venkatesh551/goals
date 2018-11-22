@@ -1,0 +1,449 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\setbeamertemplate{itemize item}[triangle]
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Lambda Expressions} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Venkatesh} % Your name
+\institute{WDC}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true
+    breakatwhitespace=true,
+    language=C++,
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=3, 
+    showstringspaces=false,
+    extendedchars=true
+    inputencoding=utf8
+}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}{Outline}
+
+  \begin{enumerate}
+
+   \item Introduction
+   \item Anonymous Inner class
+   \item Functional Interfaces
+   \item Lambda Expressions
+   \item Anonymous classes vs Lambdas
+   
+  \end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Introduction}
+
+Anonymous Classes
+\begin{itemize}
+  \item <1-> shows you how to implement a base class or \texttt{interface} without giving it a name
+  \item <2-> enable you to declare and instantiate a \texttt{class} at the same time
+  \item <3-> If an interface contains only one method, then the syntax of anonymous classes may seem unwieldy and unclear
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Anonymous class}
+
+\begin{itemize}
+\item <1-> It is always an inner class, it is never static
+\item <2-> can implement only one \texttt{interface} at a time
+\item <3-> can extend a \texttt{class} (may be abstract or concrete) only one at a time
+\item <4-> cannot have an explicitly declared constructor
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Anonymous Inner class}
+
+\begin{block}{Syntax}
+\texttt{new} \textit{[TypeArguments]} \\ 
+\hspace{6mm} \textit{ClassOrInterfaceTypeToInstantiate} ( \textit{[ArgumentList]} ) \\
+\hspace{6mm} \{\textit{ClassBody}\}
+\end{block}
+\pause
+\begin{block} {capture variables}
+can access local variables in its enclosing scope that are \texttt{final} or "effectively final"
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Anonymous class that \texttt{extends} a class}
+
+\begin{example}
+    \begin{lstlisting}
+// Here we are using Anonymous Inner class 
+// that extends a class i.e. Here a Thread class 
+
+Thread t = new Thread() { 
+      public void run() { 
+          System.out.println("Child Thread"); 
+      } 
+  }; 
+t.start(); 
+
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Anonymous class that \texttt{implements} a interface}
+
+\begin{example}
+    \begin{lstlisting}
+  // Here we are using Anonymous Inner class 
+  // that implements a interface i.e. Here Runnable interface
+
+  Runnable r = new Runnable() { 
+      public void run() { 
+          System.out.println("Child Thread"); 
+      }
+  };
+  Thread t = new Thread(r); 
+  t.start();  
+
+  \end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Functional Interface}
+
+\begin{block} {Definition}
+    
+An interface that contains \textit{one and only one} abstract method
+(which is not public method of \texttt{Object})
+\end{block}
+\pause
+\begin{example}
+    \begin{lstlisting}
+interface Runnable {
+  void run();
+}
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Functional Interface Examples}
+
+\begin{example}
+    \begin{lstlisting}
+/* Non Functional : equals is a member of Object */    
+interface NonFunc {
+  boolean equals(Object obj);
+}
+\end{lstlisting}
+\pause
+\begin{lstlisting}
+/* Functional Interface : an abstract method which is not a member of Object */
+interface Func extends NonFunc {
+  int compare(String o1, String o2);
+}
+\end{lstlisting}
+\pause
+\begin{lstlisting}
+/* java.util.Comparator<T> is functional because it has one abstract non-Object method */
+interface Comparator<T> {
+  boolean equals(Object obj);
+  int compare(T o1, T o2);
+}
+
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Creating Instances of Functional Interface}
+    \begin{itemize}
+    \item<1-> Declaring and instantiating a class that \texttt{implements} the interface
+    \item<2-> Lambda expressions
+    \item<3-> Method reference expressions
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Expressions}
+
+\begin{itemize}
+  \item A lambda expression is like a method
+  \item It forms the implementation of the abstract method defined by functional interface
+\end{itemize}
+
+\begin{block} {LambdaExpression Syntax:}
+    \texttt{LambdaParameters -> LambdaBody}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Expressions ...}
+
+\begin{itemize}
+   \item <1-> Lambda expressions are always poly expressions (not standalone expressions)
+   \item <2-> Value of a lambda-expr is an instance of a class 
+              that \texttt{implements} the functional interface type
+\end{itemize}
+
+\begin{block} {Lambda expression can occurs only in}
+  \begin{itemize}
+  \item assignment context
+  \item invocation context or
+  \item casting context
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Parameters}
+\begin{block}{formal parameters of a lambda expression}
+\begin{itemize} 
+\item either \textit{declared types} or \textit{inferred types}
+\item styles cannot be mixed
+\item Only parameters with declared types can have modifiers
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Body}
+\begin{itemize} 
+\item <1-> A lambda body is either a \textit{single expression} or \textit{a block}
+\item <2-> \texttt{this} and \texttt{super} keywords in a lambda body are same as in the surrounding context
+\item <3-> It can't use a local variable/formal parameter of its enclosing scope unless 
+that variable is \texttt{final} or "effectively final"
+\item <4-> It cannot modify the local variable/formal parameter of the enclosing scope
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Expressions ...}
+\begin{itemize}
+   \item <1-> Type of the \textit{abstract method} and the type of the lambda expression must be compatible
+   \item <2-> Type and number of the lambda parameters must be comptaible with method's parameters
+   \item <3-> Any \textit{checked exceptions} that can be thrown in the body of a lambda must be declared
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Lambda Expressions Syntax Examples }
+
+\begin{lstlisting}
+() -> 42  // No parameters, expression body
+() -> {return 42;}  // No parameters, block body with return
+\end{lstlisting}
+\pause
+
+\begin{lstlisting}
+(int x, int y) -> x + y  // Multiple declared-type parameters
+(x, y) -> x + y  // Multiple inferred-type parameters
+\end{lstlisting}
+\pause
+
+\begin{lstlisting}
+(x, int y) -> { return x + y; } /* Illegal: can't mix inferred and declared types */
+(x, final y) -> x+y // Illegal: no modifiers with inferred types
+\end{lstlisting}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Example}
+
+\begin{lstlisting}
+interface MyNumber {
+  double getValue();
+}
+
+// Create a reference to a MyNumber instance.
+MyNumber myNum;
+
+// Use a lambda in an assignment context.
+myNum = () -> 123.45;
+
+/* Call getValue(), which is implemented by the previously assigned lambda expression. */
+System.out.println(myNum.getValue());
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{More Examples}
+
+\begin{itemize}
+  \item <1-> BlockLambdaDemo.java
+  \item <2-> LambdaExceptionDemo.java
+  \item <3-> VarCapture.java
+  \item <4-> VarCapture-2.java
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Standard Functional Interfaces }
+\begin{itemize}
+\item \texttt{java.util.function} provides several predefined functional interfaces
+\end{itemize}
+
+\begin{table}
+\begin{tabular}{|l    l|} \hline
+
+\textbf{Interface} & \textbf{Function signature} \\ \hline
+\texttt{UnaryOperator<T>}  & \texttt{T	apply(T	t)} \\
+\texttt{BinaryOperator<T>} & \texttt{T	apply(T	t1, T	t2)} \\
+\texttt{Predicate<T>}      & \texttt{boolean test(T	t)} \\  
+\texttt{Function<T,R>}     & \texttt{R	apply(T	t)} \\ 
+\texttt{Supplier<T>}       & \texttt{T	get()} \\ 
+\texttt{Consumer<T>}       & \texttt{void	accept(T t)} \\ \hline
+
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Example}
+
+\begin{itemize}
+  \item <1-> UseFunctionInterfaceDemo.java
+\end{itemize}
+
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Type of a Lambda Expression}
+
+A lambda of the form \texttt{() -> stmt-expr} is interpreted as either
+\begin{lstlisting} 
+() -> { return stmt-expr; }
+\end{lstlisting}
+or
+\begin{lstlisting} 
+() -> { stmt-expr; }  
+\end{lstlisting}
+depending on the target type
+
+
+\begin {example}
+\begin{lstlisting}
+// Predicate has a boolean result
+java.util.function.Predicate<String> p = s -> list.add(s);
+// Consumer has a void result
+java.util.function.Consumer<String> c = s -> list.add(s);
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Anonymous classes vs Lambdas}
+
+\begin{itemize}
+\item <1-> Lambdas are limited to functional interface
+\item <2-> Using an anonymous class, we can create an instance of
+  \begin{itemize}
+  \item an abstract class
+  \item interface with multiple abstract methods
+  \end{itemize}
+\item <3-> In anonymous class, \texttt{this} refers to class instance itself
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Effective Java }
+
+\begin{itemize}
+\item <1-> Prefer lambdas to anonymous	classes
+\item <2-> Favor the use of standard functional interfaces
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{References}
+\begin{thebibliography}{2} % Beamer does not support BibTeX so references must be inserted manually as below
+\setbeamertemplate{bibliography item}[book]
+
+\bibitem{Version 5.2.0} Java The Complete Reference 9th Edition, Herbert Schildt
+\bibitem{SE10} The Java Language Specification Java SE 10 Edition
+\bibitem{SE10} Effective Java, 3rd Edition, Joshua Bloch
+\end{thebibliography}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Thank You}}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+

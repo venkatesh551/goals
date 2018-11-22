@@ -13,11 +13,25 @@ Read Books
 
 4. Maximum achievement  brian Tracy
 
+5. 10 minutes Declutter : The stress free habit for simplifying your Home
+
+6. 10 minutes Digital Declutter : Simple habit to eliminate Technology Overload
+
+7. The Life Changing Magic of Tidying Up : Marie Kondo
+
+8. What if - Randal
+
+9. The real magic of the rainbow
+
+10. What the buddha Taught
+
+11. Rich Habits
+
+Biograhies, Self-Help books
+  
+
 
 http://alexreichert.com/learn/reading-list/nonfiction/
-
-
-
 
 
 Bill Gates reads about 50 books every year, Mark Cuban reads three hours every day, Mark Zuckerberg resolved to read 24 books in a year, and Warren Buffett spends 80 percent of his day reading.
@@ -224,6 +238,42 @@ Parental care, concern, love, affection, instilling sense of optimism
 # Top performer, meet expectations consistently
 
     star performer
+
+
+
+--------
+
+
+* No goal is difficult if you have the will
+
+* Set goals and strive to achieve them, be content with what they have and always think positive.
+
+* At the end of each day, review accomplishments for that day.
+    - Review my schedule every morning and evening, but also on the first of every month
+    - Entry in a journal outlining a list of goals for the month
+* At the end of the month, review these goals and evaluate my progress.
+    - Whether my goals were realistic, whether I met them successfully
+    - What I need to work on in the next month
+    - Ultimately, by monitoring your progress as often you can, you help keep the momentum alive.
+* Your brain is thinking about your goals constantly and becomes excited about achieving them
+
+This helps you establish a daily habit of working towards them 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

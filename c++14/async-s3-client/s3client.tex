@@ -1,0 +1,130 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\setbeamertemplate{itemize item}[triangle]
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Async S3 client} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Venkatesh} % Your name
+\institute{WDC}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true
+    breakatwhitespace=true,
+    language=C++,
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=3, 
+    showstringspaces=false,
+    extendedchars=true
+    inputencoding=utf8
+}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}{Outline}
+  % You might wish to add the option [pausesections]
+  \begin{enumerate}
+   \item Introduction
+   \item New API support
+        \begin{itemize}
+        \item Streaming PUT/GET
+        \end{itemize}
+   \item Open Source Libraries Used
+        \begin{itemize}
+        \item Proxygen by Facebook
+        \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Introduction}
+
+\begin{itemize}
+
+\item AWS S3 SDK's doesn't provide streaming API's for \texttt{PUT/GET}
+\item No Async API support in SDK
+
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{New API's}
+
+\begin{block} {PUT}
+\begin{lstlisting}
+ int InitStreamingPut(string bucketname,
+                      string keyName,
+                      int contentLength,
+                      callbackHandler);
+ void SendS3Data(int txn, IOBuf data);
+ void FinishStreamingPut(int txn);
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{New API's}
+
+\begin{block} {GET}
+\begin{lstlisting}
+void StreamingGetObject(string bucketname,
+                        string keyName,
+                        callbackHandler);
+// callbackHandler will be called multiple times
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Open Source Libraries Used}
+
+\begin{itemize}
+
+\item proxygen : Used for building HTTP servers, proxies, and clients
+\item folly    : similar to \texttt{boost} and \texttt{std}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\Huge{\centerline{Thank You}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+

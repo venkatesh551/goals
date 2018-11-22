@@ -1,0 +1,503 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\setbeamertemplate{itemize item}[triangle]
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Operator Overloading} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Venkatesh} % Your name
+\institute{WDC}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true
+    breakatwhitespace=true,
+    language=C++,
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=3, 
+    showstringspaces=false,
+    extendedchars=true
+    inputencoding=utf8
+}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}{Outline}
+  % You might wish to add the option [pausesections]
+  \begin{enumerate}
+   \item Overloading
+   \item Operator Overloading
+        \begin{itemize}
+        \item Introduction
+        \item Special Operators
+        \item Type Conversions
+        \item Userdefined Literals
+        \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Overloading}
+
+\begin{itemize}
+\item Two or more declarations for the \texttt{same name} in the \texttt{same scope}
+\item Only Function and Function Templates can be overloaded
+\item Variable and Type declarations cannot be overloaded
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Non Overloadable Declarations}
+
+\begin{itemize}
+\item Functions differ only in return Type
+\item static and non-static member functions with same name and parameter-type list
+\begin{example}
+\begin{lstlisting}
+class X {
+static void f();
+void f();                    // ill-formed
+void f() const;              // ill-formed
+void f() const volatile;     // ill-formed
+void g();
+void g() const;              // OK: no static g
+void g() const volatile;     // OK: no static g
+};
+
+\end{lstlisting}
+\end{example}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Non Overloadable Declarations...}
+
+\begin{itemize}
+\item Member functions with same parameter-type list, some are with a ref-qualifier
+\end{itemize}
+\begin{example}
+\begin{lstlisting}
+class Y {
+void h() &;
+void h() const &; // OK
+void h() && ;    // OK, all declarations have a ref-qualifier  
+void i()  &;
+void i() const;  // ill-formed, prior declaration of i 
+                 // has a ref-qualifier
+};
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Non Overloadable Declarations...}
+
+\begin{itemize}
+\item Declarations that differ only in the type specifiers are equivalent
+\item Note : For any type T "pointer to T", "pointer to const T" are distinct
+\end{itemize}
+\begin{example}
+\begin{lstlisting}
+typedef const int cInt;
+
+int f (int);
+int f (const int);          //  redeclaration of f(int)
+
+int f (int) { /* ... */ }   //  definition of f(int)
+int f (cInt) { /* ... */ }  // error: redefinition of f(int)
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Non Overloadable Declarations...}
+
+\begin{itemize}
+\item Functions with same name in base and derived classes
+\end{itemize}
+
+\begin{example}
+\begin{lstlisting}
+struct B {
+    int f(int);
+};
+struct D : B {
+    int f(const char*); // hides B::f(int)
+};
+void h(D* pd) {
+    pd->f(1);      // error : D::f(const char*) hides B::f(int)
+    pd->B::f(1);   // OK
+    pd->f("Ben");  // OK, calls D::f
+}
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Access Rules}
+\begin{itemize}
+\item overloaded member functions can have different access rules
+\end{itemize}
+
+\begin{example}
+\begin{lstlisting}
+class buffer {
+private:
+    char* p;
+    int size;
+protected:
+    buffer(int s, char* store) { size = s; p = store; }
+public:
+    buffer(int s) { p = new char[size = s]; }
+};
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Overloaded operators}
+
+\begin{block}{syntax}
+\begin{lstlisting}
+return-type operator symbol(params)
+\end{lstlisting}
+\end{block}
+
+\begin{block}{symbol: one of}
+\begin{lstlisting}
+new delete new[] delete[]
++   -   *      /     %     ^    &     |    ~
+!   <     >    +=    -=   *=    /=   %=  
+^=  &=  |=   <<    >>    >>=    <<=    ==   !=
+<=  >=   &&   ||    ++   --    ,   ->*    
+=  ->  ()  []
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Constraints}
+
+\begin{itemize}
+\item Both unary and binary forms of \texttt{+  -  *  \&} can be overloaded
+\item We cannot introduce new tokens as operators
+\item Precedence, grouping, number of operands cannot be changed
+\item Semantics/Identity can be changed
+\end{itemize}
+\begin{block}{operators cannot be overloaded}
+\begin{lstlisting}
+  .  .*  ::  ?:  
+  #   ##    preprocessing symbols
+  sizeof  alignof  typeid
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Operator Overloading Rules}
+\begin{itemize}
+\item Either \texttt{non-static member} function or non-member function
+\item Atleast one paramter type is a class/enum
+\item Cannot have default arguments
+\item \texttt{ = \& (unary) , (comma)} predefined for each type, can be changed
+\item \texttt{ = [] () -> } must be non-static member functions
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Operator Overloading}
+
+\begin{example}
+\begin{lstlisting}
+class X {
+public:
+    X(int);
+    void operator+(int);
+};
+void operator+(X,X);
+void operator+(X,double);
+void f(X a) {
+    a+1;    // same as  a.operator+(1)
+    1+a;    // ::operator+(X(1),a)
+    a+1.0;  // ::operator+(a,1.0)
+    std::string s = "a" + "b"   // error : both are const char *
+}
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Operator overload Lookup}
+
+\begin{block}{overload resolution}
+No preference is given to members over nonmembers
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{How to Resolve Operators in Namespaces}
+\begin{example}
+\begin{lstlisting}
+#include <iostream>
+
+int main() {
+    std::string s = "hello wolrd";
+    std::cout << s; // << is defined in namespace std
+    return 0;
+}
+
+// std::cout.operator<<(s) or operator(std::cout, s)
+
+\end{lstlisting}
+\end{example}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operators in Namespaces}
+Consider a binary operator @, x@y is resolved like this: \\
+x is of type X and y is of type Y.  \\
+Look for declarations of operator@
+\begin{itemize}
+\item if X is a class, check for members of X or base of X ; and
+\item context surrounding x@y ; and
+\item if X is defined in namespace N, then in N ; and
+\item if Y is defined in namespace M, then in M 
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Assignment operator}
+\begin{itemize}
+\item \texttt{operator=} is a non-static member function with exactly one parameter
+\item implicitly declared for a class if not declared by the user
+\item Any assignment operator can be virtual
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Function call}
+\begin{itemize}
+\item \texttt{operator()} is a non-static member function with an arbitrary number of parameters
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Function call operator}
+\begin{example}
+\begin{lstlisting}
+class Action {
+public:
+    Action();
+    int operator()(int);
+    pair<int,int> operator()(int,int);
+    double operator()(double);
+};
+void f(Action act)
+{
+    int x = act(2);
+    auto y = act(3,4);
+    double z = act(2.3);
+};
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Lambda Functions}
+\begin{itemize}
+
+\item shorthand for defining and using a function object
+\item By default, \texttt{operator()} is const, it doesn't modify the captured variables
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Subscripting : \texttt{operator[]} }
+\begin{itemize}
+
+\item non-static member function with exactly one parameter
+\end{itemize}
+\begin{example}
+\begin{lstlisting}
+struct Assoc {
+    vector<pair<string,int>> vec; // vector of {name,value} pairs
+    const int& operator[] (const string&) const;
+    int& operator[](const string&);
+};
+Assoc values;
+values[string("key")];
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Dereferencing: \texttt{operator->} }
+\begin{itemize}
+\item non-static member function taking no parameters
+\end{itemize}
+\begin{example}
+\begin{lstlisting}
+class Ptr {
+    X* operator-> ();
+};
+void g(Ptr p) {
+    p->m = 7;               // (p.operator->())->m = 7
+    X* q1 = p->;            // syntax error
+    X* q2 = p.operator->(); // OK
+}
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Increment and Decrement }
+
+\begin{example}
+\begin{lstlisting}
+struct X {
+    X& operator++();     // prefix ++
+    X operator++(int);   // postfix ++
+};
+struct Y { };
+Y& operator++(Y&);       // prefix ++b 
+Y operator++(Y&, int);   // postfix b++
+
+void f(X a, Y b) {
+    ++a; // a.operator++();
+    a++; // a.operator++(0);
+    ++b; // operator++(b);
+    b++; // operator++(b, 0);
+}
+
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Conversion Operators}
+\begin{itemize}
+\item conversion from a user-defined type to a built-in type
+\item X::operator T()  where T is a type name, defines a conversion from X to T
+\end{itemize}
+\begin{example}
+\begin{lstlisting}
+class unique_ptr {
+public:
+    explicit operator bool() const noexcept;
+};
+void use(unique_ptr<Record> p, unique_ptr<int> q) {
+    if (p) {
+        // use it
+    }
+    bool b = p;     // error ; suspicious use
+    int x = p + q;  // error ; we definitly don't want this
+}
+\end{lstlisting}
+\end{example}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{UserDefined Literals}
+\begin{block}{syntax}
+operator "" identifier(parameter-declaration-clause)
+\end{block}
+\begin{lstlisting}
+/* identifier is literal suffix identifier */
+parameter-declaration-clause is one of :
+    const char*
+    unsigned long long int
+    long double
+    char
+    const char*, std::size_t
+\end{lstlisting}
+\begin{example}
+\begin{lstlisting}
+long double operator "" _km(long double);
+\end{lstlisting}
+\end{example}
+\end{frame}
+
+
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{References}
+\begin{thebibliography}{2} % Beamer does not support BibTeX so references must be inserted manually as below
+\setbeamertemplate{bibliography item}[book]
+\bibitem{Stroustrup} The C++ Programming Language [4th Edition] - Bjarne Stroustrup
+\end{thebibliography}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Thank You}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+

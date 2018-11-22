@@ -1,0 +1,225 @@
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h: In instantiation of ‘static bool std::__equal<_BoolType>::equal(_II1, _II1, _II2) [with _II1 = const utils::Test*; _II2 = const utils::Test*; bool _BoolType = false]’:
+/usr/include/c++/6/bits/stl_algobase.h:831:43:   required from ‘bool std::__equal_aux(_II1, _II1, _II2) [with _II1 = const utils::Test*; _II2 = const utils::Test*]’
+/usr/include/c++/6/bits/stl_algobase.h:1051:30:   required from ‘bool std::equal(_II1, _II1, _II2) [with _II1 = __gnu_cxx::__normal_iterator<const utils::Test*, std::vector<utils::Test> >; _II2 = __gnu_cxx::__normal_iterator<const utils::Test*, std::vector<utils::Test> >]’
+/usr/include/c++/6/bits/stl_vector.h:1511:21:   required from ‘bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&) [with _Tp = utils::Test; _Alloc = std::allocator<utils::Test>]’
+operatorOverloading.cpp:27:24:   required from here
+/usr/include/c++/6/bits/stl_algobase.h:800:22: error: no match for ‘operator==’ (operand types are ‘const utils::Test’ and ‘const utils::Test’)
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/6/vector:60,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_pair.h:435:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_pair.h:435:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::pair<_T1, _T2>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/vector:60,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:292:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:292:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+      if (!(*__first]2;operatorOverloading.cpp (~/Documents/Goals/c++14/Basics/stdlib_c++) - VIM]1;operatorOverloading.cpp[?1049h[?1h=[?12;25h[?12l[?25h[27m[m[H[2J]2;operatorOverloading.cpp (~/Docu...als/c++14/Basics/stdlib_c++) - VIM]1;operatorOverloading.cpp[?25l[1;1H[33m  2 [m[35m#include [m[31m<iostream>[m
+[33m  3 
+  4 
+  5 [m[32mnamespace[m utils {
+[33m  6 
+  7 [m    [32mclass[m Test {
+[33m  8 [m    [33mpublic[m:
+[33m  9 [m[8C[32mint[m getSize() [32mconst[m {
+[33m 10 [12Creturn[m size;
+[33m 11 [m[8C}
+[33m 12 
+ 13 [m    [33mprivate[m:
+[33m 14 [m[8C[32mint[m size;
+[33m 15 
+ 16 [m    };
+[33m 17 [m}
+[33m 18 
+ 19 [m[32mbool[m [33moperator[m == ([32mconst[m utils::Test &a, [32mconst[m utils::Test &b) {
+[33m 20 [m    [33mreturn[m a.getSize() == b.getSize();
+[33m 21 [m}
+[33m 22 
+ 23 [m[32mint[m main() {
+[1m[7moperatorOverloading.cpp[,unix][cpp]                                   0,3/31 11%[2;5H[?12l[?25h[m[24;1H
+[32mW11: Warning: File "operatorOverloading.cpp" has changed since editing started[m
+[32mSee ":help W11" for more info.[m
+[32m[O]K, (L)oad File: [m[24;1H[K[24;1H[?1l>[?1049lVim: Error reading input, exiting...
+Vim: Finished.
+[24;1H]2;venkatesh@venkatesh-Latitude-E7440: ~/Documents/Goals/c++14/Basics/stdlib_c++]1;venkatesh@venkatesh-Latitude-E7440: ~/Documents/Goals/c++14/Basics/stdlib_c++
+te argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::move_iterator<_IteratorL>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/vector:60,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1119:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1119:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::move_iterator<_IteratorL>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/vector:61:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/6/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::allocator<_Tp1>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/vector:61:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/6/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::allocator<_Tp1>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/vector:64:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_vector.h:1509:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_vector.h:1509:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/iosfwd:40:0,
+                 from /usr/include/c++/6/ios:38,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/6/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::fpos<_StateT>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/basic_string.h:5065:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5065:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/basic_string.h:5073:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5073:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::basic_string<_CharT>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/basic_string.h:5087:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5087:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   mismatched types ‘const _CharT*’ and ‘utils::Test’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/basic_string.h:5099:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5099:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /usr/include/c++/6/bits/ios_base.h:46:0,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/system_error:284:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_code&)
+   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:284:3: note:   no known conversion for argument 1 from ‘const utils::Test’ to ‘const std::error_code&’
+/usr/include/c++/6/system_error:289:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_condition&)
+   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:289:3: note:   no known conversion for argument 1 from ‘const utils::Test’ to ‘const std::error_code&’
+/usr/include/c++/6/system_error:296:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_code&)
+   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:296:3: note:   no known conversion for argument 1 from ‘const utils::Test’ to ‘const std::error_condition&’
+/usr/include/c++/6/system_error:303:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_condition&)
+   operator==(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/6/system_error:303:3: note:   no known conversion for argument 1 from ‘const utils::Test’ to ‘const std::error_condition&’
+In file included from /usr/include/c++/6/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/6/bits/basic_ios.h:37,
+                 from /usr/include/c++/6/ios:44,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from operatorOverloading.cpp:2:
+/usr/include/c++/6/bits/streambuf_iterator.h:204:5: note: candidate: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/6/bits/streambuf_iterator.h:204:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/6/vector:60:0,
+                 from operatorOverloading.cpp:1:
+/usr/include/c++/6/bits/stl_algobase.h:800:22: note:   ‘const utils::Test’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+      if (!(*__first1 == *__first2))
+           ~~~~~~~~~~~^~~~~~~~~~~~~

@@ -1,4 +1,6 @@
 
+* Standard Library :  chapters 41, 42, 34, 
+*                     chapters 31, 32, 33
 
 Read book and solve questions from 
 The C Programming Language
@@ -28,8 +30,42 @@ This aims to do the same to the part of the standard library coming from the STL
 
 https://jasonroell.com/2015/03/16/12-most-infuential-books-every-software-engineer-needs-to-read/
 
+6. C++ Concurrency in Action: Practical Multithreading
+
+7. C++ Coding Standards: 101 Rules, Guidelines, and Best Practices (C++ In-Depth Series) 
+
+8. The c++ standard library : Josuttis
+
+9. Design Patterns (Gang of Four)
+
+10. The pragmatic programmer
+
+11. Code complete2 
+
+12. Practice of Programming (kernighan and Pike)
+ 
+13. The science of Program verification (David Gries)
+
+14. Datastructures and Algorithms by Aho Hopcraft and Ullman
+
+15. How to Lie with statistics (Darell Huff's)
+
+16. Mythical Man Month (By Fred)
+
+17. The Medical Detectives by Berton Roueche
+
+18. Conceptual BlockBusting  by James L Adams
+
+19. TAOCP vol 1 to 4;  CLRS;  SedgeWick
+
+20. Refactoring the design of existing code
+
+21. 
 
 
+
+
+https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 
 
 

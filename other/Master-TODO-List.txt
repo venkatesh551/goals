@@ -1,0 +1,613 @@
+
+http://www.bbc.com/earth/story/20141020-chicks-tumble-of-terror-filmed
+
+
+"Take care of your morals first, your health next, and finally your studies."
+
+He would read a book before breakfast every day, 
+and depending on his schedule, another two or three in the evening 
+(he was a speed reader extraordinaire). 
+
+By his own estimates he read tens of thousands of books over the course of his lifetime.
+
+---------
+
+* Learn Markdown Language
+* go-lang (Finish it)
+
+Read about HTTP 1.1 and HTTP 2.0
+
+Read and Understand : producer and consumer problem , semaphores, mutexes, race conditions, Performance Improvement
+
+* precondition and post-condtion for writing member functions
+
+* send Bugs catched in code-reviews
+
+
+10th Jan FeedBack :
+    * Visibility in WorkPlace (First in Team and Outside the Team)
+    * Give Presentations
+    * Speak Loudly and clearly
+    * No dullness in Speaking, Be strong
+
+* Conference Speaker
+* Start writing a Blog
+* OpenSource Contribution
+
+Building presentations that create Maximum Impact 
+Handling audience with confidence and presenting with conviction
+
+
+
+* Lightning Memory-Mapped Database Manager (LMDB)   (Read this)
+
+* HTTP : http://gitlab.amplidata.com/dss/object-daemon/blob/master/object-daemon/test/s3client/s3client.h
+
+
+Today:
+
+* http://www.reactive-streams.org/
+* https://aws.amazon.com/blogs/developer/aws-sdk-for-java-2-0-developer-preview/
+ 
+https://wdc.app.box.com/folder/46317830918
+http://www.kegel.com/c10k.html
+https://nick-black.com/dankwiki/index.php/Fast_UNIX_Servers
+
+Network Algorithmics: An Interdisciplinary Approach to Designing Fast Networked Devices
+
+http://dcs-documentation.amplidata.com/docs/easiscale-5x/en/latest/pi_004/prometheus_framework_3p.html
+
+http://gitlab.amplidata.com/FoOS/foos/merge_requests/134/
+
+
+FeedBack on 6th Feb :
+----------------
+* Leadership (take ownership)
+* Improve communication Skills : speak Louder
+
+Reading boost asio documentation
+
+Quarterly check-ins occur in September, December, March and June timeframes.
+
+Partner with their manager in setting goals and objectives for the year
+Align daily work with stated goals
+Engage in regular, ongoing performance conversations with their manager
+Get timely and constructive feedback and support from their manager
+Develop new skills and learn to demonstrate organizational values and leadership attributes
+Plan for career development
+
+
+* Concurrency design patterns
+* Read 'Designing Data-Intensive Applications'
+
+
+
+* Only CODING, CODE-REVIEWS
+* 
+* 
+
+
+
+
+Important Links :
+------------------
+https://wdc.service-now.com/nav_to.do?uri=%2Fhome.do%3F
+
+HR-berry password : 7172871  :  Cse04551@T
+
+http://gosecure.wdc.com/
+
+https://confluence.hgst.com/display/DPD/Engineering+Done-Done+Criteria
+
+https://texblog.org/2013/01/21/side-by-side-content-in-beamer-presentations/
+
+
+Einstein used 3 simple principles to be productive:
+
+He had a daily ritual and schedule.
+He lived a minimalist lifestyle.
+He focused on his most important work
+
+
+The minimalist luxury lifestyle is:
+
+owning fewer things
+owning things of good quality
+valuing our possessions and freeing our time for other pursuits
+de-cluttering our lives to free our mental space
+
+
+He focused on the task at hand and worked until it was complete.
+He worked in almost total isolation.
+ability and willingness to concentrate on one important task and work on the task to completion.
+ 
+
+------
+
+
+Knuth’s full-time writing schedule means that he is ‘pretty much a hermit… concentrating intensively and uninterruptedly on one subject at a time, rather than swapping a number of topics in and out of his head. I’m unable to schedule appointments with visitors, travel to conferences or accept speaking engagements, or undertake any new responsibilities of any kind.’
+
+
+STEP password :  284717
+
+https://stackoverflow.com/questions/244453/best-documentation-for-boostasio
+
+
+https://aws.amazon.com/s3/faqs/
+
+7 Things You Can Do To Make Your Boss Think You're Wonderful
+
+Leading So People Will Follow Hardcover
+
+https://confluence.hgst.com/display/DPD/Apache+Kafka+ObservationsSent on:12:14 pm 
+
+
+Individuals and interactions over processes and tools.
+Working software over comprehensive documentation.
+Customer collaboration over contract negotiation.
+Responding to change over following a plan.
+
+Pending :
+--------
+
+WDC Exec Readout 
+
+Reports: https://wdc.box.com/v/EnterprisePersonas
+ 
+Videos: https://connect.wdc.com/docs/DOC-373409
+ 
+
+The IDTC web site is here: 
+https://connect.wdc.com/groups/western-digital-2018-idtc
+ 
+For abstract submission: 
+https://connect.wdc.com/groups/western-digital-2018-idtc/pages/submit-abstract
+
+Erasure Coding :
+    
+    *  http://web.eecs.utk.edu/~plank/plank/papers/CS-08-627.html
+    * 
+
+https://en.wikipedia.org/wiki/Finite_field
+
+Maven in 5min: https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+Maven in 30min: https://maven.apache.org/guides/getting-started/index.html
+
+* Learn scala    :  Give presentation
+* 
+
+https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/
+http://dcs-documentation.amplidata.com/docs/metadata-streamer-specs/en/latest/architecture/global.html
+https://wdc.app.box.com/notes/296316716226?s=uaw6pn4lyqbgf4vppjtsjv0lcmm6azmq
+http://gitlab.amplidata.com/scaler/specs/tree/5.4-ender/metadata_streamer_internal
+
+
+13th June 2018  (one-to-one)
+----------------------------
+
+ * Communication :  Participate in Innovation Day, Give Tech-Talks, 
+                    Continue presentations in Languages
+
+ * You should be very clear in English
+
+ * Explain the work to other teams, gradually target for TedX talks
+
+ Visibility across Teams :
+ ------------------------
+ * Community Of Practice for Java 
+
+ * Goals : Publish papers, Patents
+
+ * Give Feedback
+
+
+---
+
+Reading List
+
+
+*  http://dcs-documentation.amplidata.com/docs/metadata-streamer-specs/en/latest/design/global.html
+
+*  http://dcs-documentation.amplidata.com/docs/dss-specs/en/latest/architecture/global.html
+
+*  http://dcs-documentation.amplidata.com/docs/metadata-streamer-specs/en/latest/design/configuration.html
+
+
+# Doesn’t check any social media or news outlets before 8:00 AM earns a bonus point
+
+
+
+Finish the Pending tasks :
+    
+    1 presentation
+    
+    3 months Goals 
+
+
+
+* Learn Java 10 
+
+    
+https://github.com/djtrack16/thyme
+
+
+https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence
+
+
+
+
+IRCTC e-wallet pwd : Topcoder1 
+
+
+
+
+
+
+
+
+
+show xml reports
+-------------
+
+checkstyle jenkins plugin
+
+code-covearge jenkins plugin
+
+spotbugs jenkins plugin
+
+
+
+https://github.com/google/google-java-format
+
+
+https://confluence.hgst.com/pages/viewpage.action?pageId=128296794
+
+
+
+Check this :
+
+What is the current behavior of MDS  when replication is disabled on System?   
+
+  Does it ignore tlogs emitted by Arakoon or store them in the queue?
+
+
+
+http://gitlab.amplidata.com/outofband/mds-fanout/merge_requests/18
+
+
+americanexpress.co.in/myaccount 
+
+
+code reviews :
+    
+    http://gitlab.amplidata.com/outofband/mds-fanout/merge_requests/27
+    
+
+The practice of programming - Brian W. Kernighan, Rob Pike
+
+revisit log4j
+tools
+Java
+Maven
+Junit
+code-coverage
+completable futures
+
+
+
+mvn local jar files - proper fix
+
+mds mock server
+
+Pending Reading
+-----------------
+AWS s3 documentation
+
+Activescale admin Guide 5.3
+
+
+
+https://confluence.hgst.com/pages/viewpage.action?pageId=152196025 - ASCLI howto
+
+https://stackify.com/common-mistakes-handling-java-exception/
+ 
+
+https://www.eclemma.org/jacoco/  :  Code Coverage
+
+
+Cse04551@
+
+
+
+Recommended reading
+
+1. effective java 3rd edition
+
+2. Java Concurrency in Practice
+
+3. Code Complete 2
+
+--------------
+
+
+http://thrift-tutorial.readthedocs.io/en/latest/thrift-stack.html
+
+Filing Income tax by august 15th 
+
+
+---------
+
+Google Guava library :
+
+
+Immutable collections: we use them almost every time a collection is required. Immutability is vital to maintain your sanity,
+EventBus: publish / subscribe style communication between components that does not require to know each other,
+
+
+---------
+
+
+
+DCS Referral 
+
+
+
+
+
+http://dcs-documentation.amplidata.com/docs/metadata-streamer-specs/en/latest/design/configuration.html#no-data-pumps-active-on-entire-system
+
+
+Updating MDS code confluence page
+
+
+
+
+
+ Validate config parameters 
+ ErrorLogs across modules (mdsclient, consumers  etc)
+ Throw proper exception after retry failures in MDS client  (not retry exception)
+ Config parameters for modules in config file
+ Unit tests for code coverage
+ Publisher has  to handle to TTransport Exception
+ log. fatal   is not   crashing the application .  understand the behavior 
+
+ 
+
+Feedback
+
+1 to 1 Surendra : (on 8th aug 2018)
+-----------------
+
+* Improve communication
+
+*  +ve : I have good repuatation
+
+1 to 1 with Viswa : (on 8th aug 2018)
+-------------------
+
+* I am slow, so I have to improve my pace
+
+* Give tech talks, (on code maintainability : writing good code), on Java
+
+* +ve : star performer (like virat kohli, made a good comparison)
+
+    
+
+
+
+-------
+
+https://www.youtube.com/watch?v=HpbchS5kmio
+
+https://developer.oracle.com/java/jdk-10-local-variable-type-inference
+
+https://blog.codefx.org/java/java-10-var-type-inference/
+
+
+
+
+
+Read the Mail : 
+
+* ASCLI to backend flow: slides, documentation and recording
+
+* mds-fanoout Quick prototype Ideas
+
+
+PI-6 : August 20 to November 23rd 
+
+
+
+
+SetUp voice Mail - Monday
+
+
+
+bhqpp4313r 19061987
+
+
+
+https://www.programcreek.com/java-api-examples/?code=gomoob/java-aws-s3/java-aws-s3-master/src/test/java/com/gomoob/aws/s3/S3Test.java#
+
+
+
+
+
+GATE-2019
+
+cse04551@
+
+
+enrollment-id : 
+
+
+https://appsgate.iitm.ac.in/doLogout.html
+
+
+outlook : Topcoder1@
+
+
+Never use a WDC account passowrd for anything outside of the company
+
+long and complex password , you can remember
+
+router : Never use a "admin" or manufacturer's default
+
+
+Keep the antivirus and anti-malware subscriptions on your devices up to date
+Never click on any links, email attachments, or downloadable content unless you’re sure you can trust the source
+Report an email or document that seems suspicious
+Confirm the correct public Wi-Fi network before connecting
+Create a reasonably long and complex password that is different for each of your accounts, never using any Western Digital account password anywhere else
+
+Share files securely and appropriately
+
+Don’t trust the browsing habits of others
+
+Never leave your device unattended
+
+Never share company information that isn’t already available to the public, and limit the personal information you share
+
+
+----
+
+Request you to claim your bills by 15th of October 2018.
+
+POSH at Workplace  by 31st sep 2018
+
+----
+
+
+https://www.quora.com/What-are-the-books-preferred-for-the-GATE-ECE-preparation/answers/70173710
+
+http://gitlab.amplidata.com/scaler/specs/blob/d2ac5117971728ae597c0a6f2fa0ab06f97c5e92/scalerdb/scalerdb_values_api.thrift
+
+http://dcs-documentation.amplidata.com/docs/scaler-specs/en/latest/scalerdb/docs/key_layout.html
+
+http://gitlab.amplidata.com/scaler/flame/blob/5.x-stable/src/main/java/com/amplidata/himalaya/flame/flamekey/ObjectKey.java#L35
+
+
+
+24th Oct 2018
+-------------
+
+Mohan : Code review  - http://gitlab.amplidata.com/ucello/metadata_streamer/merge_requests/102/diffs
+
+* enroll for medical insurance - saiTeja
+
+* Town Hall meeting with Phil on 13th Nov (11:30AM – 12:45PM) : 3rd floor Training room-Hallmark
+
+* Admit Card Gate 2019 : Friday	4th January 2019
+
+* Vcare : 13th Nov 2018
+
+*********************************************************************************
+
+https://teams.microsoft.com/
+
+Pending Reading :
+-------------------
+https://mirage.io/wiki/tutorial-lwt
+
+https://github.com/ocsigen/lwt
+
+specs/thrift/Keyrouter.thrift
+
+Quick ride
+
+
+http://gitlab.amplidata.com/arakoon/arakoon_api/blob/master/arakoon/common.thrift
+
+
+  
+	
+	
+
+---------
+
+http://gitlab.amplidata.com/FoOS/foos/blob/master/python-client/pypi/foos_management/keyrouter.py
+
+
+
+from keyrouter import KeyrouterClient
+c = KeyrouterClient('127.0.0.1', 3000)
+from kv_keyrouter_api.ttypes import Key_value
+
+>>> c
+<keyrouter.KeyrouterClient object at 0x7f8f2f853710>
+>>> c.sequence()
+calling sequence(Sequence_argmts(context_id='sherpa-cli', space_enum=1, assert_list=None, deadline=None, max_waiting_time=None, update_list=None))
+
+kv1 = Key_value('+reserved\x00batch\x00metadata_streamer_under_test\x0000000001542278944795\x00cluster_0\x0000000000000000000100', None)
+kv2 = Key_value('QN_free_2', '100')
+
+>>> 
+
+def delete_entries ():
+  resp = c.list_keys(prefix='Q', max_keys=10, start_key='')
+  u_list = [Key_value(key, None) for key in resp.k_list]
+  c.sequence(assert_list=[], update_list=u_list)
+  print c.list_keys(prefix='Q', max_keys=10, start_key='').k_list
+
+
+
+import thrift.TSerialization
+from thrift.protocol.TCompactProtocol import TCompactProtocolFactory
+from scalerdb_api.common.ttypes import SDB_Value
+from tlog_batch_metadata.ttypes import TlogBatchMetadata
+from store_tlog_batch.ttypes import TlogEntryList
+resp = c.list_key_values(prefix='Q', max_keys=10, start_key='')
+sdb_val = thrift.TSerialization.deserialize(SDB_Value(), resp.kv_list[0].value[1:],  TCompactProtocolFactory())
+metadata = thrift.TSerialization.deserialize(TlogBatchMetadata(), sdb_val.blob, TCompactProtocolFactory())
+tlog_entry_list = thrift.TSerialization.deserialize(TlogEntryList(), metadata.data, TCompactProtocolFactory())
+for ele in tlog_entry_list.entry_list:
+  print ele
+
+
+
+java -cp mock/target/mock-mds-0.1.0-jar-with-dependencies.jar  com.wdc.mdsfanout.mockmds.MockMDS
+
+java -cp fanout/target/mdsfanout-0.1.0-jar-with-dependencies.jar  -Dlog4j2.configurationFile=fanout/target/test-classes/log4j2.properties  com.wdc.mdsfanout.Main -c config/fanoutservice.ini  
+
+java -cp target/kafkapublisher-0.1-jar-with-dependencies.jar:../mds-fanout/target/mdsfanout-0.1.0-jar-with-dependencies.jar  com/wdc/ons/Main -c config/ons.properties
+
+
+Reading List :
+  
+  https://www.ibm.com/developerworks/java/library/j-jtp05236/index.html?ca=drs-#2.1
+  
+  Cognitive complexity
+  
+  Ons spec review email
+
+
+
+Investment Proofs Submission for FY 2018-19
+
+https://connect.wdc.com/docs/DOC-134547#jive_content_id_Concur_Tip_Sheets
+
+
+wifi password : saivenkat
+
+HDFC passwd :   _jVNQ4he
+
+https://selfcare.actcorp.in/web/blr/home
+
+  
+  
+  
+*  clean up folders; Move all your information to github
+* 
+*  
+* 
+
+
+aadhar card, pan card, 1 photo
+
+https://www.javaworld.com/article/2077602/learn-java/java-tip-98--reflect-on-the-visitor-design-pattern.html
+
+https://cs.nyu.edu/courses/fall16/CSCI-UA.0470-001/slides/
+
+
+

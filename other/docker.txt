@@ -1,0 +1,119 @@
+
+
+docker build : Tag an image (-t)
+----------------------
+
+docker build [OPTIONS] PATH | URL | -
+
+docker build -t od_cleanup .
+
+
+docker run : 
+-----------------------
+
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+
+docker run -it  --name test   od_cleanup /bin/bash
+
+sudo docker run -it --name test -v  /home/venkatesh/od_latest:/home   od_latest  /bin/bash
+
+
+sudo docker run --privileged -it --name 'mds-sharona5.3'  artifactory.wdc.com:6555/jenkins-slave-ocaml-sharona5.3  /bin/bash
+
+
+sudo docker run -it --name jenkins_foos 021b1207e184 /bin/bash
+
+https://gist.github.com/bhagman/8058279
+
+
+You can run 
+
+docker exec -it <container> /bin/bash 
+
+from multiple terminals to launch several sessions connected to the same container.
+
+
+# Delete Remote Branch
+
+$ git push origin --delete <branch_name>
+
+*******************
+
+$ git branch -rd origin/bugfix
+Deleted remote branch origin/bugfix (was 2a14ef7).
+
+local branch rename
+
+$ git branch -m <oldname> <newname>
+
+
+**********
+git remote prune origin
+
+
+http://stackoverflow.com/questions/34990542/getting-headers-value-in-proxygen
+--------------------
+
+
+
+headers_to_ignore : common for all requests
+
+
+POST : 
+
+Mandatory Headers : Content-Length
+
+Optional headers to verify:  Date, traceID
+
+
+***
+
+GET : 
+
+Optional headers to verify : Date, traceID, Range
+
+***
+
+DELETE :
+
+Optional headers to verify : Date, traceID,
+
+
+
+
+
+
+
+HTTP header fields provide required information about the request or response, or about 
+the object sent in the message body. There are four types of HTTP message headers:
+
+General-header: These header fields have general applicability for both request and response messages.
+
+Client Request-header: These header fields have applicability only for request messages.
+
+Server Response-header: These header fields have applicability only for response messages.
+
+Entity-header: These header fields define meta information about the entity-body or, if no body is present, about the resource identified by the request.
+
+
+
+ curl -v -d "@test-file" -H "Date: Sat, 13 May 2017 16:33:13 GMT" -H "X-WDC-Trace-Id: 123BCD" -H "Content-Length: 6" http://127.0.0.1:9000/v1/objects
+
+
+
+
+purportedly = as appears or is stated to be true, though not necessarily so; allegedly.
+
+litigious = tending or too ready to take legal action to settle disputes.
+
+
+
+
+
+
+sudo docker run --privileged -it --name -v  /home/venkatesh/od_latest:/home/jenkins/repos 'fanout-dev'  artifactory.wdc.com:6555/jenkins-slave-fanout  /bin/bash
+
+
+
+

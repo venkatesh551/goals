@@ -1,0 +1,1194 @@
+
+* 0 and typedefs are out, nullptr and alias declarations are in.
+
+* Enums should now be scoped. Smart pointers are now preferable to built-in ones.
+Moving objects is normally better than copying them.
+
+
+how to employ the features to create software  that’s correct, efficient, maintainable, and portable.
+
+when (and when not) to use auto declarations?
+
+
+
+keywords : and, or, xor, not, not_eq, 
+
+constexpr
+noexcept
+using
+mutable
+nullptr
+auto
+explicit
+
+thread_local
+typename
+typeid
+
+
+
+
+A hidden global name can be referred to using the scope resolution operator :: 
+
+
+Initialization :
+
+prefer
+
+X a1 {v};  // It is clearer and less error-prone
+
+than
+
+X a2 = {v};
+X a3 = v;
+X a4(v);
+
+Initialization using {} , list initialization, does not allow narrowing
+
+So prefer = when using auto .
+
+
+The empty initializer list, {} , is used to indicate that a default value is desired.
+
+
+Deducing a Type: auto --  use auto in small scopes.
+
+
+For practical programming, thinking in terms of rvalue and lvalue is usually sufficient.
+
+
+Thread-local objects; that is, objects declared thread_local: such objects are cre-
+ated when their thread is and destroyed when their thread is.
+
+
+* Maintain a consistent naming style
+
+* Keep scopes small
+
+* Prefer the {} -initializer syntax for declarations with a named type;
+
+* Prefer the = syntax for the initialization in declarations using auto
+
+* Avoid uninitialized variables;
+
+* Use an alias to define synonyms for types
+
+
+
+
+The literal nullptr represents the null pointer.
+
+
+Long strings can be broken by whitespace.
+
+
+constexpr ’s role is to enable and ensure compile-time evaluation, whereas 
+const ’s primary role is to specify immutability in interfaces.
+
+
+Lvalue References :
+*********************
+
+the notation X& means "reference to X"
+
+no operator operates on a reference.
+
+
+Rvalue References :
+***********************
+The && declarator operator means ‘‘rvalue reference.’’ 
+We do not use const rvalue references; most of the benefits from using rvalue references involve writing to the object to which it refers.
+
+Both a const lvalue reference and an rvalue reference can bind to an rvalue.
+
+We use a const lvalue reference to prevent modification of an argument.
+
+
+* Use rvalue references (only) for forwarding and move semantics
+
+* Keep pointers that represent ownership inside handle classes
+
+
+Structres :
+************
+Objects of structure types can be assigned, passed as 
+function arguments, and returned as the result from a function.
+
+comparison ( == and != ), are not available by default.
+
+A struct is simply a class where the members are public by default.
+
+
+
+Enumerations :
+*************
+
+An enum class is a scoped and strongly typed enumeration.
+
+* Prefer class enum s over ‘‘plain’’ enum s to minimize surprises
+
+
+Statements:
+****************
+
+A semicolon is by itself a statement, the empty statement.
+
+
+Range- for Statements:
+************************
+
+for (auto x : v)
+
+The expression after the colon must denote a sequence (a range); 
+that is, it must yield a value for which we can call v.begin() and v.end()
+
+
+Comments:
+*****************
+A comment for each class, template, and namespace
+
+• A comment for each nontrivial function stating its purpose, the algorithm used (unless it is
+obvious), and maybe something about the assumptions it makes about its environment
+
+• A comment for each global and namespace variable and constant
+
+• A few comments where the code is nonobvious and/or nonportable
+
+
+Writing good comments can be as difficult as writing the program itself. 
+It is an art well worth cultivating.
+
+* Keep comments crisp
+
+* Don’t say in comments what can be clearly stated in code
+
+* Prefer a range- for -statement to a for -statement when there is a choice
+
+
+
+A lambda-declarator is a (possibly empty, comma-separated) 
+list of parameters optionally
+followed by the mutable specifier, 
+optionally followed by a noexcept specifier, optionally followed by a return type.
+
+[ capture-list ] lambda-declarator { stmt-List }
+
+
+Scope resolution
+-------------------
+class-name :: member
+namespace-name :: member
+:: name 
+
+TypeCasting
+--------------------
+typeid ( type )
+typeid ( expr )
+
+dynamic_cast < type > ( expr )
+static_cast < type > ( expr )
+reinterpret_cast < type > ( expr )
+const_cast < type > ( expr )
+
+noexcept ( expr )
+
+Constant Expressions
+***********************
+
+constexpr : Evaluate at compile time
+const : Do not modify in this scope
+
+We can use constexpr functions and literal types to provide a significant
+level of type safety and expressive power.
+
+Usually, constexpr is a better choice than const for defining simple constants,
+but constexpr is new in C++11.
+
+
+
+* Prefer the standard library to other libraries and to ‘‘handcrafted code’’
+
+* Avoid narrowing conversions
+
+* When reading, always consider ill-formed input
+
+
+Memory Management
+-----------------------
+
+* Leaked objects: People use new and then forget to delete the allocated object.
+
+* Premature deletion: People delete an object that they have some other pointer to and later use that other pointer.
+
+* Double deletion: An object is deleted twice, invoking its destructor (if any) twice.
+
+
+* When you construct an object on the free store, place its pointer into a manager object
+with a destructor that will destroy it. 
+
+string, vector and all the other standard-library containers, unique_ptr, and shared_ptr. 
+
+Wherever possible, have that manager object be a scoped variable. 
+Many classical uses of free store can be eliminated by using move semantics
+to return large objects represented as manager objects from functions.
+
+
+The ‘‘plain’’ operator delete is used to delete individual objects; delete[] is used to delete arrays.
+
+
+
+
+The delete[] operator may be applied only to a pointer to an array returned by new of an array or to
+the null pointer. Applying delete[] to the null pointer has no effect.
+However, do not use new to create local objects.
+
+The standard implementations of operator new() and operator new[]() do not initialize the mem-
+ory returned.
+
+
+
+Lambda Expressions :
+**********************
+
+A lambda expression, sometimes also referred to as a lambda function or as a lambda, is a simplified notation for defining and using an anonymous function object.
+
+A lambda expression consists of a sequence of parts:
+
+• A possibly empty capture list, specifying what names from the definition environment can
+be used in the lambda expression’s body, and whether those are copied or accessed by refer-
+ence. The capture list is delimited by []
+
+• An optional parameter list, specifying what arguments the lambda expression requires. The
+parameter list is delimited by ()
+
+• An optional mutable specifier, indicating that the lambda expression’s body may modify the
+state of the lambda (i.e., change the lambda’s copies of variables captured by value)
+
+• An optional noexcept specifier.
+• An optional return type declaration of the form −> type (§11.4.4).
+• A body, specifying the code to be executed. The body is delimited by {}
+
+
+
+An object of a class generated from a lambda is called a closure object (or simply a closure).
+
+Some lambdas require no access to their local environment. Such lambdas are defined with the empty lambda introducer []
+
+[] : an empty capture list. This implies that no local names from the surrounding context can
+be used in the lambda body. For such lambda expressions, data is obtained from arguments
+or from nonlocal variables.
+
+
+[&] : implicitly capture by reference. All local names can be used. All local variables are
+accessed by reference
+
+
+[=] : implicitly capture by value. All local names can be used. All names refer to copies of
+the local variables taken at the point of call of the lambda expression.
+
+
+[capture-list ] : explicit capture; the capture-list is the list of names of local variables to be
+captured (i.e., stored in the object) by reference or by value. Variables with names preceded
+by & are captured by reference. Other variables are captured by value. A capture list can
+also contain this and names followed by ... as elements.
+
+
+[&, capture-list ] : implicitly capture by reference all local variables with names not men-
+tioned in the list. The capture list can contain this . Listed names cannot be preceded by & .
+Variables named in the capture list are captured by value.
+
+[=, capture-list ] : implicitly capture by value all local variables with names not mentioned in
+the list. The capture list cannot contain this . The listed names must be preceded by & . Vari-
+ables named in the capture list are captured by reference.
+
+
+a local name preceded by & is always captured by reference and a local name not preceded 
+by & is always captured by value. Only capture by reference allows modification of variables
+in the calling environment.
+
+
+We can include class members in the set of names potentially captured by adding this to the capture list.
+
+
+If a lambda expression does not take any arguments, the argument list can be omitted.
+
+If a lambda body does not have a return -statement, the lambda’s return type is void . If a lambda
+body consists of just a single return -statement, the lambda’s return type is the type of the return ’s
+expression. If neither is the case, we have to explicitly supply a return type.
+
+
+Explicit Type Conversion :
+---------------------------
+
+Construction, using the {} notation, providing type-safe construction of new values.
+
+• Named conversions, providing conversions of various degrees of nastiness:
+• const_cast for getting write access to something declared const 
+• static_cast for reversing a well-defined implicit conversion 
+• reinterpret_cast for changing the meaning of bit patterns 
+• dynamic_cast for dynamically checked class hierarchy navigation
+
+
+
+It easier for a programmer to find the more dangerous conversions represented as reinterpret_casts.
+
+
+* Prefer prefix ++ over suffix ++
+* Use resource handles to avoid leaks, premature deletion, and double deletion
+* Prefer a named function object to a lambda if the operation requires comments
+* Prefer a named function object to a lambda if the operation requires comments
+* Prefer a named function object to a lambda if the operation is generally useful
+* Keep lambdas short
+* Avoid explicit type conversion (casts)
+* When explicit type conversion is necessary, prefer a named cast
+
+
+
+Parts of a Function Declaration :
+************************************
+
+• inline , indicating a desire to have function calls implemented by inlining the function body
+
+• constexpr , indicating that it should be possible to evaluate the function at compile time if
+given constant expressions as arguments 
+
+• noexcept , indicating that the function may not throw an exception 
+
+• A linkage specification, for example, static
+
+• [[noreturn]] , indicating that the function will not return using the normal call/return mechanism
+
+In addition, a member function may be specified as:
+• virtual , indicating that it can be overridden in a derived class 
+• override , indicating that it must be overriding a virtual function from a base class 
+• final , indicating that it cannot be overriden in a derived class 
+• static , indicating that it is not associated with a particular object
+• const , indicating that it may not modify its object
+
+
+
+Constructors are technicallly not functions; in particular, they don’t return
+a value, can initialize bases and members, and can’t hav e their address taken.
+• Destructors  can’t be overloaded and can’t hav e their address taken.
+• Function objects are not functions (they are objects) and can’t be over-
+loaded, but their operator() s are functions.
+• Lambda expressions  are basically a shorthand for defining function objects.
+
+
+
+A function that does not return normally (i.e., through a return or ‘‘falling off the end’’) can be marked [[noreturn]]
+
+
+inline Functions
+******************
+
+constexpr Functions
+********************
+
+
+[[noreturn]] Functions
+
+Placing [[noreturn]] at the start of a function declaration indicates that the function is not
+expected to return
+
+
+
+* Use pass-by- const -reference to pass large values that you don’t need to modify.
+
+* Use rvalue references to implement move and forwarding
+
+* Use pass-by-reference only if you have to
+
+
+
+
+* Use macros only for conditional compilation and in particular for include guards
+
+* Keep functions short
+
+* Use const extensively and consistently
+
+* Use rvalue references to implement move and forwarding
+
+* If a function cannot return, mark it [[noreturn]]
+
+* If a function may have to be evaluated at compile time, declare it constexpr
+
+* Avoid macros
+
+* Prefer function objects
+
+
+
+The exception-handling mechanism:
+
+• Allows the programmer to explicitly separate error-handling code from ‘‘ordinary code,’’
+thus making the program more readable and more amenable to tools
+
+An exception is an object throw n to represent the occurrence of an error. It can be of any type that
+can be copied, but it is strongly recommended to use only user-defined types specifically defined
+for that purpose.
+
+
+the ultimate response to an unhandled error (an uncaught exception) is to terminate the program.
+
+Where termination is an acceptable response, an uncaught exception will achieve that because it turns into a call of terminate() . Also, a noexcept
+specifier can make that desire explicit.
+
+
+The C++ language rules for partial construction and destruction ensure that exceptions thrown
+while constructing subobjects and members will be handled correctly without special attention
+from standard-library code.
+
+
+Terminate the program: Violating a precondition is a serious design error, and the program
+must not proceed in the presence of such errors. Hopefully, the total system can recover
+from the failure of one component (that program) – eventually such failures may be elimi-
+nated from the system through improved design, debugging, and testing.
+
+
+Throwing Exceptions
+***********************
+We can throw an exception of any type that can be copied or moved
+
+
+The exception object caught  is in principle a copy of the one thrown.
+
+noexcept Functions:
+--------------------
+
+Declaring a function noexcept can be most valuable for a programmer reasoning about a pro-
+gram and for a compiler optimizing a program. The programmer need not worry about providing
+try -clauses (for dealing with failures in a noexcept function) and an optimizer need not worry about
+control paths from exception handling.
+
+What happens if the  programmer ‘‘lied’’ so that a noexcept function deliberately or accidentally threw an exception that
+wasn’t caught before leaving the noexcept function?
+
+It terminates unconditionally by invoking std::terminate().
+
+
+he predicate in a noexcept() specification must be a constant expression. Plain noexcept means
+noexcept(true) .
+
+
+Exception Specifications
+****************************
+
+
+A rethrow is indicated by a throw without an operand.
+
+A rethrow may occur in a catch clause or in a function called from a catch -clause. If a rethrow is attempted when there is no exception to
+rethrow, std::terminate()  will be called.
+
+
+
+Catch Every Exception:
+---------------------------
+In <stdexcept> , the standard library provides a small hierarchy of exception classes with a common base exception.
+
+
+* Don’t throw an exception while handling an exception.
+• Don’t throw an exception that can’t be caught.
+
+
+The specific rules for calling terminate() are
+
+• When no suitable handler was found for a thrown exception
+
+
+Exceptions and Threads
+-------------------------
+If an exception is not caught on a thread , std::terminate() is called
+
+
+* Develop an error-handling strategy early in a design
+
+* Use exceptions for error handling
+
+* If your function may not throw, declare it noexcept
+
+* Don’t assume that every exception is derived from class exception ;
+
+* Keep ordinary code and error-handling code separate
+
+
+
+
+
+
+Namespaces :
+******************
+
+* A namespace is a (named) scope. You can access members defined earlier in a namespace from
+later declarations, but you cannot (without special effort) refer to members from outside the namespace.
+
+
+Explicit Qualification
+------------------------
+A member can be declared within a namespace definition and defined later using the 
+namespacename :: member-name notation.
+Members of a namespace must be introduced using this notation:
+
+
+
+When a name is frequently used outside its namespace, it can be a bother to repeatedly qualify it with its namespace name.
+
+
+Namespaces Are Open
+------------------------
+A namespace is open; that is, you can add names to it from several separate namespace declara-
+tions
+
+That way, the members of a namespace need not be placed contiguously in a single file.
+
+
+
+Namespaces as Modules
+------------------------
+A namespace is a mechanism for expressing logical grouping.
+
+
+If a qualification for a name is uncommon, use explicit qualification to make it clear from
+where the name comes.
+
+Don’t use explicit qualification for names in the same namespace as the user.
+
+
+Interfaces and Implementations:
+-------------------------------
+
+
+* Use namespaces to express logical structure
+
+* Use namespaces to express logical structure
+
+* Don’t put a using -directive in a header file
+
+* Avoid very short names for namespaces;
+
+* Avoid placing heavy notational burdens on users of your namespaces;
+
+* Use separate namespaces for interfaces and implementations
+
+
+
+In particular, we aim for a clean separation of interfaces (e.g.function declarations) and implementations (e.g., function definitions).
+
+
+A user presents a source file to the compiler. The file is then preprocessed; that is, macro processing is done
+and #include directives bring in headers (§2.4.1, §15.2.2). The result of preprocessing is called a translation unit.
+
+
+The One-Definition Rule
+A given class, enumeration, and template, etc., must be defined exactly once in a program
+
+
+
+For each C standard-library header <X.h> , there is a corresponding standard C++ header <cX> .
+
+
+
+
+
+Program Termination
+A program can terminate in several ways:
+By returning from main()
+By calling exit()
+By calling abort()
+By throwing an uncaught exception
+By violating noexcept
+By calling quick_exit()
+
+
+
+
+
+* Avoid non-inline function definitions in headers;
+
+
+Classes:
+------------
+
+By default, the copy of a class object is a copy of each member. If that default is not the behavior
+wanted for a class X , a more appropriate behavior can be provided
+
+the user can define an appropriate assignment operator.
+
+explicit Constructors:
+----------------------
+
+An initialization with an = is considered a copy initialization
+
+By default, declare a constructor that can be called with a single argument explicit.
+
+If a constructor is declared explicit and defined outside the class, that explicit cannot be repeated:
+
+----
+
+A member function defined within the class definition – is taken
+to be an inline  member function.
+
+
+Mutability :
+-------------
+
+The const after the (empty) argument list in the function declarations indicates that these functions
+do not modify the state.
+
+
+We can define a member of a class to be object: mutable , meaning that it can be modified even in a const
+
+const does not apply (transitively) to objects accessed through pointers or references.
+
+
+"this" is considered an rvalue, so it is not possible to take the address of this or to assign to this .
+
+
+
+A class is called concrete (or a concrete class) if its representation is part of its definition. This
+distinguishes it from abstract classes  which provide an interface to a variety of implementations.
+
+
+* Represent concepts as classes
+
+* Separate the interface of a class from its implementation
+
+* By default declare single-argument constructors explicit
+
+* Declare a member function that does not modify the state of its object const 
+
+
+
+
+In C++ static is optional (because in C++ const objects have internal linkage by default)
+
+----
+
+Can a class containing virtual function made singleton?
+
+
+
+If you're asking whether it makes sense, then the question is more difficult to answer; but mainly because 
+singletons in general are a very disputed pattern. So you might want to ask yourself if you really need a 
+singleton (singletons e.g. usually make testing much harder, you'd have to introduce special "workarounds" 
+to get classes using them under test; basically, they're very thinly veiled global variables).
+
+You'd also have to elaborate a bit on the intended use case: When you declare a method virtual, you basically say that some subclass may want to change that behavior. If the base class is a singleton, it means that there can only be one of it. Would the same have to apply for all subclasses? Should there be only ever one class derived from that one existing in your system? Then you'd best have a look at factories and possibly use them in conjunction with the Singleton (again, if you decide you really need the Singleton).
+
+
+
+
+immune = not vulnerable
+
+auto variables must be initialized, are generally immune to type mismatches
+that can lead to portability or efficiency problems, can ease the process of
+refactoring, and typically require less typing than variables with explicitly
+specified types
+
+
+* Distinguish between () and {} when creating objects:
+  ------------------------------------------------------
+
+1. prefer braced initialization.
+
+2. uncopyable objects (e.g., std::atomics) may be initialized using braces or parentheses, but not using "="
+
+
+A novel feature of braced initialization is that it prohibits implicit narrowing conver
+sions among built-in types. If the value of an expression in a braced initializer isn’t
+guaranteed to be expressible by the type of the object being initialized, the code won’t compile.
+
+
+Widget w3{}; // calls Widget ctor with no args
+
+
+
+Braced initialization is the most widely usable initialization syntax, it prevents
+narrowing conversions, and it’s immune to C++’s most vexing parse.
+
+
+Prefer nullptr to 0 and NULL
+-------------------------------
+
+Prefer alias declarations to typedef's
+
+
+	using FP = void (*)(int, const std::string&);
+
+typedefs don’t support templatization, but alias declarations do.
+
+Prefer scoped enum s to unscoped enum's
+
+coped enums are declared via “enum class”, they’re sometimes referred to as
+enum classes.
+
+their enumerators are much more strongly typed. 
+Enumerators for unscoped enums implicitly convert to integral types.
+
+Enumerators of scoped enums are visible only within the enum. They convert
+to other types only with a cast.
+
+
+Both scoped and unscoped enums support specification of the underlying type.
+The default underlying type for scoped enums is int. Unscoped enums have no
+default underlying type.
+
+• Scoped enums may always be forward-declared. Unscoped enums may be
+forward-declared only if their declaration specifies an underlying type.
+
+
+---------
+
+
+Prefer deleted functions to private undefined ones.
+---------------------------------------------------
+if you want to suppress use of a member function, it’s almost always the copy constructor,
+the assignment operator, or both.
+
+
+Declaring these functions private prevents clients from calling them
+
+In C++11, there’s a better way to achieve essentially the same end: use “= delete” to
+mark the copy constructor and the copy assignment operator as deleted functions.
+
+Deleted functions may not be used in any way, so even code
+that’s in member and friend functions will fail to compile if it tries
+
+By convention, deleted functions are declared public, not private.
+
+
+When client code tries to use a member function, C++ checks accessibility
+before deleted status. When client code tries to use a deleted private function, some
+compilers complain only about the function being private, even though the func‐
+tion’s accessibility doesn’t really affect whether it can be used. It’s worth bearing this
+in mind when revising legacy code to replace private-and-not-defined member
+functions with deleted ones, because making the new functions public will generally
+result in better error messages.
+
+An important advantage of deleted functions is that any function may be deleted,
+while only member functions may be private.
+
+
+Prefer deleted functions to private undefined ones.
+
+• Any function may be deleted, including non-member functions and template
+instantiations.
+
+
+
+Declare overriding functions override
+---------------------------------------
+
+The world of object-oriented programming in C++ revolves around classes, inheri‐
+tance, and virtual functions. Among the most fundamental ideas in this world is that
+virtual function implementations in derived classes override the implementations of
+their base class counterparts.
+
+
+
+• The base class function must be virtual.
+• The base and derived function names must be identical (except in the case of
+destructors).
+• The parameter types of the base and derived functions must be identical.
+• The constness of the base and derived functions must be identical.
+• The return types and exception specifications of the base and derived functions
+must be compatible.
+
+
+
+C++11 gives you a way to make explicit that a derived class function is
+supposed to override a base class version: declare it override.
+
+
+Declare overriding functions override.
+• Member function reference qualifiers make it possible to treat lvalue and
+rvalue objects (*this) differently.
+
+
+
+Prefer const_iterator s to iterator's
+---------------------------------------
+
+
+Declare functions noexcept if they won’t emit exceptions.
+
+
+Changing an exception specification could break client code, because callers might be
+dependent on the original exception specification.
+
+
+In C++11, unconditional noexcept is for functions that guarantee they won’t emit exceptions.
+
+
+Whether a function should be so declared is a matter of interface design. The
+exception-emitting behavior of a function is of key interest to clients. Callers can
+query a function’s noexcept status, and the results of such a query can affect the
+exception safety or efficiency of the calling code. As such, whether a function is
+noexcept is as important a piece of information as whether a member function is
+const. Failure to declare a function noexcept when you know that it won’t emit an
+exception is simply poor interface specification.
+
+
+But there’s an additional incentive to apply noexcept to functions that won’t
+produce exceptions: it permits compilers to generate better object code.
+
+
+The difference between unwinding the call stack and possibly unwinding it has a sur‐
+prisingly large impact on code generation.
+
+In a noexcept function, optimizers need not keep the runtime stack in an unwindable state if an exception would propagate out of the function, nor must they ensure that objects in a noexcept function are destroyed in the inverse order of construction should an exception leave the function.
+
+Functions with “throw()” exception specifications lack such optimization flexibility,
+as do functions with no exception specification at all.
+
+
+
+RetType function(params) noexcept; // most optimizable
+RetType function(params) throw(); // less optimizable
+RetType function(params); // less optimizable
+
+
+Optimization is important, but correctness is more important. I noted at the beginning of this Item that noexcept is part of a function’s interface, so you should declare a function noexcept only if you are willing to commit to a noexcept implementation over the long term.
+
+If you declare a function noexcept and later regret that decision, your options are bleak.
+You can remove noexcept from the function’s declaration (i.e., change its interface),
+thus running the risk of breaking client code.
+
+
+
+some functions have natural noexcept implementations.
+
+Twisting a function’s implementation to permit a noexcept declaration is the tail
+wagging the dog. Is putting the cart before the horse. Is not seeing the forest for the
+trees. Is...choose your favorite metaphor. 
+
+If a straightforward function implementation might yield exceptions (e.g., by invoking a function that might throw), the hoops you’ll jump through to hide that from callers (e.g., catching all exceptions and replacing them with status codes or special return values) will not only complicate your function’s implementation, it will typically complicate code at call sites, too. 
+
+For example, callers may have to check for status codes or special return values. The run‐
+time cost of those complications (e.g., extra branches, larger functions that put more
+pressure on instruction caches, etc.) could exceed any speedup you’d hope to achieve
+via noexcept, plus you’d be saddled with source code that’s more difficult to com‐
+prehend and maintain. That’d be poor software engineering.
+
+
+By default, all memory deallocation functions and all 
+destructors—both user-defined and compiler-generated—are implicitly noexcept.
+
+There’s thus no need to declare them noexcept.
+
+The only time a destructor is not implicitly noexcept is when a data member of the class (including inherited  members and those contained inside other data members) is of a type that expressly states that its destructor may emit exceptions (e.g., declares it “noexcept(false)”).
+Such destructors are uncommon.
+
+noexcept is part of a function’s interface, and that means that callers may
+depend on it.
+• noexcept functions are more optimizable than non-noexcept functions.
+
+
+Use constexpr whenever possible
+-----------------------------------
+
+constexpr indicates a value that’s not only constant, it’s known dur‐
+ing compilation.
+
+
+It’s good that constexpr functions need not produce results that are const or known
+during compilation!
+
+Values known during compilation are privileged. They may be placed in read-only
+memory, for example, and, especially for developers of embedded systems, this can
+be a feature of considerable importance.
+
+C++ requires an integral constant expression.
+
+all constexpr objects are const, but not all const objects are constexpr.
+
+constexpr functions can be used in contexts that demand compile-time con‐
+stants. If the values of the arguments you pass to a constexpr function in such a
+context are known during compilation, the result will be computed during
+compilation.
+
+
+When a constexpr function is called with one or more values that are not
+known during compilation, it acts like a normal function, computing its result at
+runtime. This means you don’t need two functions to perform the same opera‐
+tion, one for compile-time constants and one for all other values. The constexpr
+function does it all.
+
+constexpr functions are limited to taking and returning literal types, which essen‐
+tially means types that can have values determined during compilation.
+
+In C++11, constexpr functions may contain no more than a single executable state‐
+ment: a return.
+
+
+constexpr functions are limited to taking and returning literal types, which essen‐
+tially means types that can have values determined during compilation.
+
+
+
+both constexpr objects and constexpr functions can be employed in a
+wider range of contexts than non-constexpr objects and functions. By using con
+stexpr whenever possible, you maximize the range of situations in which your
+objects and functions may be used.
+
+
+• constexpr objects are const and are initialized with values known during
+compilation.
+• constexpr functions can produce compile-time results when called with
+arguments whose values are known during compilation.
+• constexpr objects and functions may be used in a wider range of contexts
+than non-constexpr objects and functions.
+• constexpr is part of an object’s or function’s interface.
+
+
+
+Make const member functions thread safe.
+------------------------------------------
+
+Having multiple threads perform a read operation without synchronization is safe.
+
+code could have different threads reading and writing the same memory without synchronization, and
+that’s the definition of a data race. This code has undefined behavior.
+
+Make const member functions thread safe
+
+Use of std::atomic variables may offer better performance than a mutex, but
+they’re suited for manipulation of only a single variable or memory location.
+
+
+
+Understand special member function generation.
+------------------------------------------------
+
+
+parlance = a particular way of speaking or using words, especially a way common to those with a particular job or interest
+
+C++98 has four such functions: the default constructor, the
+destructor, the copy constructor, and the copy assignment operator.
+
+These functions are generated only if they’re needed, i.e., if some
+code uses them without their being expressly declared in the class.
+
+A default constructor is generated only if the class declares no constructors at all.
+
+Generated special member functions are implicitly public and inline, and they’re nonvirtual unless the function in question is a destructor in a derived class inheriting from a base class with a virtual destructor.
+
+In that case, the compiler-generated destructor for the derived class is also virtual.
+
+
+As of C++11, the special member functions club has two more inductees: the move
+constructor and the move assignment operator.
+
+	Widget(Widget&& rhs);  // move constructor
+	Widget& operator=(Widget&& rhs);  // move assignment operator
+
+The move operations are generated only if they’re needed, and if
+they are generated, they perform “memberwise moves” on the non-static data members of the class.
+
+
+memberwise move consists of move operations on data members and base classes that support move operations, but a copy operation for those that don’t.
+
+The heart of each memberwise “move” is application of std::move to the object to be moved
+from, and the result is used during function overload resolution to determine
+whether a move or a copy should be performed.
+
+--------------
+
+The Rule of Three  states that if you declare any of a copy constructor, copy assignment operator, or destructor, you should declare all three.
+
+C++11 does not generate move operations for a class with a user-declared destructor.
+
+So move operations are generated for classes (when needed) only if these three things
+are true:
+• No copy operations are declared in the class.
+• No move operations are declared in the class.
+• No destructor is declared in the class.
+
+
+C++11 deprecates the automatic generation of copy operations for classes declaring
+copy operations or a destructor. This means that if you have code that depends on
+the generation of copy operations in classes declaring a destructor or one of the copy
+operations, you should consider upgrading these classes to eliminate the dependence.
+
+
+C++11’s “= default”
+
+Often, the default implementation would be correct, and “= default” is a good
+way to express that. 
+
+However, a user-declared destructor suppresses generation of the move operations, so if movability is to be supported, “= default” often finds a second application.
+
+
+---------
+The C++11 rules governing the special member functions are thus:
+
+• Default constructor: Generated only if the class contains
+no user-declared constructors.
+
+• Destructor: sole difference is that destructors
+are noexcept by default. As in C++98, virtual only if a base class
+destructor is virtual.
+
+• Copy constructor: memberwise copy construction of non-static data members. Generated only if the class lacks a user declared copy constructor. Deleted if the class declares a move operation.
+Generation of this function in a class with a user-declared copy assignment oper‐
+ator or destructor is deprecated.
+
+• Copy assignment operator: memberwise
+copy assignment of non-static data members. Generated only if the class lacks a
+user-declared copy assignment operator. Deleted if the class declares a move
+operation. Generation of this function in a class with a user-declared copy con‐
+structor or destructor is deprecated.
+
+• Move constructor and move assignment operator: Each performs memberwise
+moving of non-static data members. Generated only if the class contains no user-
+declared copy operations, move operations, or destructor.
+
+
+The special member functions are those compilers may generate on their own:
+default constructor, destructor, copy operations, and move operations.
+• Move operations are generated only for classes lacking explicitly declared
+move operations, copy operations, and a destructor.
+• The copy constructor is generated only for classes lacking an explicitly
+declared copy constructor, and it’s deleted if a move operation is declared.
+The copy assignment operator is generated only for classes lacking an explic‐
+itly declared copy assignment operator, and it’s deleted if a move operation is
+declared. Generation of the copy operations in classes with an explicitly
+declared destructor is deprecated.
+• Member function templates never suppress generation of special member
+functions
+
+
+------------------
+
+
+Smart Pointers
+
+******************
+
+
+There are four smart pointers in C++11: 
+std::auto_ptr, 
+std::unique_ptr,
+std::shared_ptr, and 
+std::weak_ptr.
+
+Use std::unique_ptr for exclusive-ownership resource management.
+-----------------------------------------------------------------
+
+std::unique_ptrs are the same size as raw pointers, and for most operations (including dereferencing), they execute exactly the same instructions.
+
+
+std::unique_ptr embodies exclusive ownership semantics. A non-null std::
+unique_ptr always owns what it points to. Moving a std::unique_ptr transfers
+ownership from the source pointer to the destination pointer. (The source pointer is
+set to null.) Copying a std::unique_ptr isn’t allowed, because if you could copy a
+std::unique_ptr, you’d end up with two std::unique_ptrs to the same resource,
+each thinking it owned (and should therefore destroy) that resource.
+std::unique_ptr is thus a move-only type. Upon destruction, a non-null
+std::unique_ptr destroys its resource. By default, resource destruction is accom‐
+plished by applying delete to the raw pointer inside the std::unique_ptr.
+
+
+
+std::unique_ptr comes in two forms, one for individual objects (std::
+unique_ptr<T>) and one for arrays (std::unique_ptr<T[]>). As a result, there’s
+never any ambiguity about what kind of entity a std::unique_ptr points to. The
+std::unique_ptr API is designed to match the form you’re using. For example,
+there’s no indexing operator (operator[]) for the single-object form, while the array
+form lacks dereferencing operators (operator* and operator->)
+
+
+• std::unique_ptr is a small, fast, move-only smart pointer for managing
+resources with exclusive-ownership semantics.
+• By default, resource destruction takes place via delete, but custom deleters
+can be specified. Stateful deleters and function pointers as deleters increase the
+size of std::unique_ptr objects.
+• Converting a std::unique_ptr to a std::shared_ptr is easy.
+
+
+
+Use std::shared_ptr for shared-ownership resource management.
+---------------------------------------------------------------
+
+An object accessed via std::shared_ptrs has its lifetime managed by those pointers through
+shared ownership. No specific std::shared_ptr owns the object. Instead, all
+std::shared_ptrs pointing to it collaborate to ensure its destruction at the point
+where it’s no longer needed. When the last std::shared_ptr pointing to an object
+stops pointing there (e.g., because the std::shared_ptr is destroyed or made to
+point to a different object), that std::shared_ptr destroys the object it points to. As
+with garbage collection, clients need not concern themselves with managing the life‐
+time of pointed-to objects, but as with destructors, the timing of the objects’ destruc‐
+tion is deterministic.
+
+
+
+A std::shared_ptr can tell whether it’s the last one pointing to a resource by con‐
+sulting the resource’s reference count, a value associated with the resource that keeps
+track of how many std::shared_ptrs point to it. std::shared_ptr constructors
+increment this count (usually—see below), std::shared_ptr destructors decrement
+it, and copy assignment operators do both. (If sp1 and sp2 are std::shared_ptrs to
+different objects, the assignment “sp1 = sp2;” modifies sp1 such that it points to the
+object pointed to by sp2. The net effect of the assignment is that the reference count
+for the object originally pointed to by sp1 is decremented, while that for the object
+pointed to by sp2 is incremented.) If a std::shared_ptr sees a reference count of
+zero after performing a decrement, no more std::shared_ptrs point to the
+resource, so the std::shared_ptr destroys it.
+
+
+
+Atomic operations are typically slower than non-atomic operations, so even though reference
+counts are usually only a word in size, you should assume that reading and writ‐
+ing them is comparatively costly.
+
+
+Like std::unique_ptr, std::shared_ptr uses delete as its default
+resource-destruction mechanism, but it also supports custom deleters.
+The design of this support differs from that for std::unique_ptr,
+
+avoid passing raw pointers to a std::shared_ptr constructor. The usual alternative
+is to use std::make_shared
+
+
+
+• std::shared_ptrs offer convenience approaching that of garbage collection
+for the shared lifetime management of arbitrary resources.
+• Compared to std::unique_ptr, std::shared_ptr objects are typically
+twice as big, incur overhead for control blocks, and require atomic reference
+count manipulations.
+• Default resource destruction is via delete, but custom deleters are supported.
+The type of the deleter has no effect on the type of the std::shared_ptr.
+• Avoid creating std::shared_ptrs from variables of raw pointer type.
+
+
+
+
+Prefer std::make_unique and std::make_shared to direct use of new .
+
+
+
+
+
+
+
+
+
+first of all mocking of standard library is never a good practice and testing the code on such granulation level is art for art's sake.
+
+
+http://gitlab.amplidata.com/product/activescale/merge_requests/1897
+
+
+
+https://www.youtube.com/watch?v=qmiKalurakw
+
+
+
+
+
+W.r.t your code you can do the following to reduce build times:
+
+Use Forward declarations wherever possible.
+Use namespace declarations instead of namespace directive.
+Make sure you do not have unnecessary includes.
+

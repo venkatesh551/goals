@@ -1,0 +1,606 @@
+
+* Expert in C++ Language   ( C++ Books : 2, Design Patterns)
+
+* OD :  Maintainer   (ask about internal details)
+
+* RED coder - Long term goal
+
+* Communication skills
+
+
+https://howtobeastoic.wordpress.com/books/
+
+
+"persistent in
+your studies, and that, putting all else aside, you
+make it each day your endeavour to become a better man
+"
+mind-set :  "Look how easy this is!"
+
+
+https://github.com/mbuzdalov
+
+
+----------
+local-expense :   http://sgwincs8.hitachigst.global/finance/le/india/
+
+pervasive = spreading widely throughout an area or a group of people.
+proliferation = rapid increase in the number or amount of something.
+nourish = keep (a feeling or belief) in one's mind, typically for a long time.
+manifold = many and various
+scout = a soldier or other person sent out ahead of a main force so as to 
+        gather information about the enemy's position, strength, or movements.
+
+haste = excessive speed or urgency of movement or action; hurry.
+contemplation = the action of looking thoughtfully at something for a long time.
+conformity = compliance with standards, rules, or laws
+rejoice = feel or show great joy or delight.
+endeavour = try hard to do or achieve something.
+exhort = strongly encourage or urge (someone) to do something.
+conspicuous = clearly visible.
+repellent = causing disgust or distaste.
+unkempt = having an untidy or dishevelled appearance
+slovenly = untidy and dirty.
+scorn = a feeling and expression of contempt or disdain for someone or something.
+multitude = a large number of people or things.
+wretched = in a very unhappy or unfortunate state, miserable
+biorhythm = a cyclic pattern of physical, emotional, or mental activity believed to occur in a person's life.
+elite = the richest, most powerful, best-educated, or best-trained group in a society
+ethics = the study of what is morally right and wrong, or a set of beliefs about what is 
+morally right and wrong
+stranded = left without the means to move from somewhere.
+voyage = a long journey involving travel by sea or in space.
+shore = the land along the edge of a sea, lake, or other large body of water
+dissolution = the action of formally ending or dismissing an assembly, partnership, or official body
+amid =  in the middle of
+elusive = difficult to find, catch, or achieve.
+afflicts = (of a problem or illness) cause pain or trouble to; affect adversely
+embrace = an act of accepting something willingly or enthusiastically.
+defiance = open resistance; bold disobedience.
+torment = cause to experience severe mental or physical suffering.
+ought = used to indicate something that is probable.
+        used to indicate duty or correctness, typically when criticizing someone's actions.
+exaggerating = represent (something) as being larger, better, or worse than it really is.
+anticipating = regard as probable; expect or predict
+flogged = sell or offer for sale
+condole = express sympathy for (someone); grieve with.
+allusion = an expression designed to call something to mind without mentioning it explicitly; an indirect or passing reference.
+strangle = squeeze or constrict the neck of (a person or animal), especially so as to cause death.
+blazes = burn fiercely or brightly
+
+
+
+
+
+Intellectual cycle
+33 days; Circatrigintan
+alertness
+analytical functioning
+logical analysis
+memory or recall
+communication
+
+
+
+
+
+
+Tips for resume :
+    
+    remove too many languages
+    remove coding websites
+    
+
+
+
+hemantha : 875 - 500 
+
+sandeep : 16710 - 0.15 * 9k  = 15360 + 6000 + 285 = 21645 - 194 = 21451 - 15k - 10k = 
+
+------------------
+
+
+https://en.wikipedia.org/wiki/List_of_data_structures
+https://writing.pupius.co.uk/whiteboarding-4df873dbba2e
+http://bigocheatsheet.com/
+https://medium.com/always-be-coding/abc-always-be-coding-d5f8051afce2
+https://medium.com/always-be-coding/four-steps-to-google-without-a-degree-8f381aa6bd5e
+
+https://www.google.co.in/search?q=google+programming+interview+questions&gws_rd=cr&ei=YrtZWeLEH8b5vgTvyLI4
+
+https://www.topcoder.com/community/data-science/data-science-tutorials/
+
+https://community.topcoder.com/tc?module=MatchList
+https://elliot.land/post/what-makes-a-great-software-engineer
+https://www.entrepreneur.com/article/240644
+http://mastersinsoftwareengineering.net/15-qualities-every-software-engineer-should-have
+
+https://www.scalablepath.com/blog/7-qualities-that-differentiate-a-good-programmer-from-a-great-programmer/
+
+https://blog.goyello.com/2012/03/08/top-4-qualities-of-a-good-software-developer/
+
+
+
+https://www.youtube.com/watch?v=RT46MpK39rQ
+
+https://www.youtube.com/watch?v=1OEu9C51K2A
+
+
+https://www.youtube.com/watch?v=TcGabGT3Vk8
+
+
+
+
+1219402961
+
+
+
+
+
+
+
+
+
+
+Practice makes perfect.
+
+
+
+3)  Improve your theoretical knowledge. Find one or more books on algorithms or discrete mathematics, which is suitable for your level (you'd better find them in your native language, so I would not recommend anything) - read them in your free time.
+
+4) Keep the rule: if you read in the book about algorithm which you do not know, or know but never tried to implement - write its title into your task list.
+
+5) Spend 1-2 hours a day solving problems from CodeForces, TopCoder, SPOJ etc. If you could not solve or understand something - write its title and number in the end of your task list.
+
+6) Spend another 1-2 hours a day attempting to implement algorithms or solve problems from your task list. If you could not solve some problem, transfer it to the end of the task list.
+
+
+-----------
+
+nose command
+
+There is an option for nose:
+
+-x, --stop
+Stop running tests after the first error or failure
+
+
+How to create a random .txt(Human readable text like ascii) file in linux
+
+base64 /dev/urandom | head -c 10000000 > file.txt
+
+
+
+Implement mock server
+
+
+
+
+https://github.com/facebook/fbthrift/tree/master/thrift/tutorial/cpp/async/fetcher
+
+
+ls -l --block-size=M 
+
+
+du -sk name
+
+where name can be:
+the name of a file (gives size of file in kilobytes), or
+the name of a directory (gives size of directory, including subdirectories, in kilobytes), or
+an asterisk (gives size of all files and directories, including subdirectories, in current directory in kilobytes), or
+
+
+shutil.copy2(OBJECT_DAEMON_CONFIG_FILE, 
+             os.path.dirname(OBJECT_DAEMON_CONFIG_FILE) + '/object-daemon.origconf')
+             
+https://en.m.wikipedia.org/wiki/Selection_algorithm
+https://testing.googleblog.com/2014/07/measuring-coverage-at-google.html
+
+
+outlook password : venkat04551@
+
+
+
+
+
+
+
+
+
+There are three desired skills required in all industries 
+i.e. critical thinking, 
+complex problem solving, and 
+decision making during a critical situation which occurs in Industry.
+
+So in other words, PhDs able to identify the right problem, 
+identify the right answer for that problem and take 
+right decision to resolve the problem.
+
+Never forget that you are a PhDs and your work is doing 
+research on a situation/topic. You are highly trained for 
+finding a problem and resolve it asap.
+
+
+
+---
+
+
+
+
+Well-tested code is a characteristic of high quality code, 
+and software developers often assess code coverage statistics when deciding if software is ready for a release.
+
+
+* submit internet bills, other bills
+
+
+
+“use camelCase for variable names” to 
+
+“never use global variables” to 
+“never use exceptions.”
+
+
+
+In general, don't use exceptions for flow control. They are effectively a non-local goto which makes programs more difficult to read and follow.
+As such, they should be reserved for exceptional situations. If you can get away with not using a try-catch block for flow control, don't. Your programs will be more readable and maintainable.
+
+
+
+
+
+
+
+
+
+
+
+1. Strict coding guidelines, run cpplint tools
+
+2. Efficient algorithms
+
+3. Write a unit-test for every method u have implemented.
+
+4. Format using astyle
+
+5. Code-Coverage : 100% 
+
+6. Code-review, 
+
+
+
+
+eventBase library ??
+
+Date header field validation against system date ??
+
+
+6. activescale repo changes
+
+	- fill values through yml files
+	- change config files (add new parameters)
+	- chnage manifest file : add a new version
+
+
+
+
+
+
+
+create the data-files in a separate folder.
+
+
+pid = self.check_service() is in setup()
+ 
+
+checks the object-daemon is running or not for every test-case, this is not needed
+
+
+If  object-daemon crashes for some testcase, should we proceed with next-testcases by starting the OD in next test-case setup ??
+
+
+ideally, we should not proceed here, we should stop where the crash happens.
+
+
+when u need to take a backup of log-file, after running every-test-case,
+
+or   all tests are completed ??
+
+
+remove self. for local variables 
+
+
+bug in extracting pid
+
+stop on the first failure test-case in jenkins
+
+use os.path.join() for file paths, safe way to combine paths
+
+For gcov : 
+
+proxygen httpserver handles SIGINT, SIGTERM, so there is no need to register new signal-handlers in our code.
+
+only thing we need to do for termination, send the signal from component-test scripts or 
+
+from a separate shell-script.
+
+
+http_server_  is a shared pointer, it's not required.
+
+understand how servers are started and threads ??
+
+*********
+
+
+
+http://bobah.net/book/export/html/2
+
+
+
+http://www.chennainerd.in/blog/2014/06/08/gcov-c-slash-c-plus-plus-code-coverage-testing-tool/
+
+
+If the program is a daemon, better to add exit(0) in the SIGINT and SIGTERM signal handler. to do a graceful exit.
+
+
+
+*****************
+
+glog
+
+
+
+// By default, errors (including fatal errors) get logged to stderr as
+// well as the file.
+//
+// The default is ERROR instead of FATAL so that users can see problems
+// when they run a program without having to look in another file.
+
+
+
+is periodic logging  logs eventhough there is no change in the stats ??
+
+------------------------
+
+why http_server is a shared pointer??
+
+
+optional review comments
+
+
+* using namespace should be removed
+
+*  gtest has macros like EXPECT_NE, EXPECT_EQ  use those constructs 
+
+
+* OP_MAX_SIZE name is misleading, u are trying to say invalid-method.
+
+
+* use uint8_t for enum class 
+
+* HTTPMethod or HTTP Request Method :  is easy to understand, instead of http_op::Type
+
+
+* check url-first and then method, if url is wrong 400,
+now check the method, if method is wrong, METHOD_NOT_ALLOWED
+
+---------
+
+How to view threads of a process on Linux
+
+
+In ps command, "-T" option enables thread views. The following command list all threads created by a process with <pid>.
+
+$ ps -T -p <pid>
+
+top -H -p <pid>
+
+
+. When threads are forked inside a program for multiple flows of execution, these threads share certain resources (e.g., memory address space, open files) among themselves to minimize forking overhead and avoid expensive IPC (inter-process communication) channel. These properties make threads an efficient mechanism for concurrent execution.
+
+In Linux, threads (also called Lightweight Processes (LWP)) created within a program will have the same "thread group ID" as the program's PID. Each thread will then have its own thread ID (TID). To the Linux kernel's scheduler, threads are nothing more than standard processes which happen to share certain resources. Classic command-line tools such as ps or top, which display process-level information by default, can be instructed to display thread-level information.
+
+
+
+
+
+
+pyparsing,
+
+pylibconfig2
+
+
+https://github.com/cnangel/python-libconfig
+
+
+use subprocess.call  shell=False
+
+use subprocess.check_call   CalledProcessError
+
+
+
+setup
+-------
+stop the daemon if running
+read-file-data
+
+test-case:
+---------
+replace it
+write to a file
+start the daemon with new config file
+check return-code is nonzero
+
+teardown
+--------
+delete the genearated file
+
+
+
+
+
+
+
+
+
+
+make sure that all constructors initialize everything in the object." So in his opinion, the easiest way to (attempt to) write "bug free" code is not to try to memorize the rules (and in fact he does not lay them out in the book), but to explicitly initialize everything.
+
+
+https://www.tutorialspoint.com/software_testing_dictionary/decision_coverage_testing.htm
+
+
+
+To calculate Branch  Coverage, one has to find out the 
+minimum number of paths which will ensure that all the edges are covered.
+
+
+
+
+
+Branch coverage is a requirement that, for each branch in the program (e.g., if statements, loops), 
+each branch have been executed at least once during testing. 
+(It is sometimes also described as saying that each branch condition must have been true 
+at least once and false at least once during testing.)
+
+
+Code coverage:
+
+
+Basic coverage criteria:
+--------------------------
+Function coverage – Has each function (or subroutine) in the program been called?
+
+Statement coverage – Has each statement in the program been executed?
+
+Branch coverage – Has each branch (also called DD-path) of each control structure (such as in if and case statements) been executed? For example, given an if statement, have both the true and false branches been executed? Another way of saying this is, has every edge in the program been executed?
+
+Condition coverage (or predicate coverage) – Has each Boolean sub-expression evaluated both to true and false?
+
+Condition coverage does not necessarily imply branch coverage.
+
+--
+
+Parameter value coverage (PVC) requires that in a method taking parameters, all the common values for such parameters be considered. The idea is that all common possible values for a parameter are tested.[8] For example, common values for a string are: 1) null, 2) empty, 3) whitespace (space, tabs, newline), 4) valid string, 5) invalid string, 6) single-byte string, 7) double-byte string. It may also be appropriate to use very long strings. Failure to test each possible parameter value may leave a bug.
+
+
+State coverage – Has each state in a finite-state machine been reached and explored?
+
+Data-flow coverage – Has each variable definition and its usage been reached and explored?
+
+
+--------------------
+
+
+
+
++OPTFLAGS=-g3 -ggdb -O1 -DNDEBUG -fsanitize=thread -fno-omit-frame-pointer  -fPIE -pie  
++LDFLAGS+=-fsanitize=thread -fuse-ld=gold
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+headers-verification is a different part
+
+
+. Bind-Failures, config validation ??
+
+. Server header field ??
+
+. GET response ??
+
+
+
+
+
+
+----
+
+gitversion.c: .git/HEAD .git/index
+    echo "const char *gitversion = \"$(shell git rev-parse HEAD)\";" > $@
+
+
+
+Now simply add gitversion.c to your build process as normal. Make sure to remove it on make clean, 
+and add it to .gitignore so 
+its not added to the git repository accidentally. 
+Add an extern const char *gitversion; to a header somewhere, and you can access it like that.
+
+
+Probably the easiest way to do this would be to add to your makefile a rule to generate a .c file with the current git commit ID
+
+
+
+
+
+
+http://stackoverflow.com/questions/6526451/how-to-include-git-commit-number-into-a-c-executable
+
+
+
+
+
+Combining Multiple Commits Into One Prior To Push
+
+
+git checkout master
+git pull
+git checkout topical_xFeature
+git rebase -i master
+
+
+
+http://stackoverflow.com/questions/5721566/combining-multiple-commits-into-one-prior-to-push
+
+
+http://www.kegel.com/c10k.html
+http://highscalability.com/blog/2013/5/13/the-secret-to-10-million-concurrent-connections-the-kernel-i.html
+
+
+
+The C10K problem:   handling many connections and various I/O paradigms including epoll()
+
+* The C10k problem is the problem of optimising network sockets to handle a large number of clients at the same time
+
+
+Performance is not the same as scalability.
+
+Why Servers could not handle 10K concurrent connections because of O(n^2) algorithms used in the kernel.
+
+Two basic problems in the kernel:
+
+	Connection = thread/process. As a packet came in it would walk down all 10K processes in the kernel to figure out which thread should handle the packet
+
+	Connections = select/poll (single thread). Same scalability problem. Each packet had to walk a list of sockets.
+
+	Solution: fix the kernel to make lookups in constant time
+
+	Threads now constant time context switch regardless of number of threads.
+
+	Came with a new scalable epoll()/IOCompletionPort constant time socket lookup.
+
+
+libevent: high-level event-handling library ontop of the epoll. 
+
+
+
+
+
+
+
+# https://docs.python.org/2/library/httplib.html
+
+# https://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html
+
+

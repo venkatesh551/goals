@@ -1,0 +1,16 @@
+“Genius is 1% inspiration and 99% perspiration”.
+
+There are no shortcuts. Practice. Practice. Practice!
+
+
+
+
+
+
+Advantages:
+
+Go compiles very quickly.
+Go supports concurrency at the language level.
+Functions are first class objects in Go.
+Go has garbage collection.
+Strings and maps are built into the language.

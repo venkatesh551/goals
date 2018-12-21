@@ -2,29 +2,23 @@
 # Books to read
 
 1. Art of Computer Programming (vol 1-4)
-
 1. The Pragmatic Programmer
 2. Effective Java
-
 3. Refactoring: Improving the Design of Existing Code
 4. Programming Pearls by Jon Bentley
 5. Design Patterns by the Gang of Four
 6. The Mythical Man Month
 7. Clean Code: A Handbook of Agile Software Craftsmanship
-8. Algorithms (4th Edition) by Robert Sedgewick, Kevin Wayne
-
 10. Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin)
 11. The Clean Coder: A Code of Conduct for Professional Programmers
-
-
-
+8. Algorithms (4th Edition) by Robert Sedgewick, Kevin Wayne
 6. Hackers-Delight-Henry-S-Warren
+
 Java :
-  complete reference - syntax
-  JLS
-  Java Concurrency in Practice 1 Edition
-  
-2. 
+1.  complete reference - syntax
+2.  JLS
+3.  Java Concurrency in Practice 1 Edition
+
 3. Test Driven Development: By Example
 4. Working Effectively with Legacy Code 1st Edition
 

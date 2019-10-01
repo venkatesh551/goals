@@ -32,6 +32,14 @@ Read Books
 
 11. Rich Habits
 
+12. 4DX : 4 disciplines of Execution
+
+ Zero to One: Notes on Startups, or How to Build the Future by Peter Thiel
+ 
+ Deep Work: Rules for Focused Success in a Distracted World by Cal Newport
+ 
+ 
+
 Biograhies, Self-Help books
   
 
